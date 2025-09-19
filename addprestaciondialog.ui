@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AddPrestacionDialog</class>
+ <widget class="QDialog" name="AddPrestacionDialog">
+  <property name="windowTitle">
+   <string>Nueva prestación</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QLabel" name="labelPrestacionRealizada">
+     <property name="text"><string>Prestación realizada</string></property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QLineEdit" name="editPrestacionDialog"/>
+   </item>
+   <item row="0" column="2">
+    <widget class="QLabel" name="labelCostoTotal">
+     <property name="text"><string>Costo total</string></property>
+    </widget>
+   </item>
+   <item row="0" column="3">
+    <widget class="QLineEdit" name="editCostoTotalDialog"/>
+   </item>
+
+   <item row="1" column="0">
+    <widget class="QLabel" name="labelDebe">
+     <property name="text"><string>Debe</string></property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QLineEdit" name="editDebe"/>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="labelHaber">
+     <property name="text"><string>Haber</string></property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QLineEdit" name="editHaber"/>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="labelSaldo">
+     <property name="text"><string>Saldo</string></property>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <widget class="QLineEdit" name="editSaldo"/>
+   </item>
+
+   <item row="1" column="2">
+    <widget class="QLabel" name="labelGenerarCuotas">
+     <property name="text"><string>Generar cuotas</string></property>
+    </widget>
+   </item>
+   <item row="2" column="2">
+    <widget class="QLabel" name="labelCantidad">
+     <property name="text"><string>Cantidad</string></property>
+    </widget>
+   </item>
+   <item row="2" column="3">
+    <widget class="QComboBox" name="comboCantidad">
+     <item><property name="text"><string>1</string></property></item>
+     <item><property name="text"><string>2</string></property></item>
+     <item><property name="text"><string>3</string></property></item>
+    </widget>
+   </item>
+   <item row="3" column="2">
+    <widget class="QLabel" name="labelMonto1">
+     <property name="text"><string>Monto cuota 1</string></property>
+    </widget>
+   </item>
+   <item row="3" column="3">
+    <widget class="QLineEdit" name="editMonto1"/>
+   </item>
+   <item row="4" column="2">
+    <widget class="QLabel" name="labelMonto2">
+     <property name="text"><string>Monto cuota 2</string></property>
+    </widget>
+   </item>
+   <item row="4" column="3">
+    <widget class="QLineEdit" name="editMonto2"/>
+   </item>
+   <item row="5" column="2">
+    <widget class="QLabel" name="labelMonto3">
+     <property name="text"><string>Monto cuota 3</string></property>
+    </widget>
+   </item>
+   <item row="5" column="3">
+    <widget class="QLineEdit" name="editMonto3"/>
+   </item>
+
+   <item row="6" column="0">
+    <widget class="QLabel" name="labelObservaciones">
+     <property name="text"><string>Observaciones</string></property>
+    </widget>
+   </item>
+   <item row="6" column="1" colspan="3">
+    <widget class="QTextEdit" name="textObservaciones"/>
+   </item>
+
+   <item row="7" column="1">
+    <widget class="QPushButton" name="btnAgregar">
+     <property name="text"><string>Agregar prestación</string></property>
+    </widget>
+   </item>
+   <item row="7" column="2">
+    <widget class="QPushButton" name="btnAdjuntar">
+     <property name="text"><string>Adjuntar imagen</string></property>
+    </widget>
+   </item>
+   <item row="7" column="3">
+    <widget class="QPushButton" name="btnFinalizar">
+     <property name="text"><string>Finalizar turno</string></property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+ </ui>
+
+
+

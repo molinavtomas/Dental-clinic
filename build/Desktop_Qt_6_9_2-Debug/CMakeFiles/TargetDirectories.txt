@@ -1,0 +1,9 @@
+/home/tomas/Proyectos/Dental-clinic/Dental-clinic/Dental-clinic/build/Desktop_Qt_6_9_2-Debug/CMakeFiles/Dental-clinic.dir
+/home/tomas/Proyectos/Dental-clinic/Dental-clinic/Dental-clinic/build/Desktop_Qt_6_9_2-Debug/CMakeFiles/edit_cache.dir
+/home/tomas/Proyectos/Dental-clinic/Dental-clinic/Dental-clinic/build/Desktop_Qt_6_9_2-Debug/CMakeFiles/rebuild_cache.dir
+/home/tomas/Proyectos/Dental-clinic/Dental-clinic/Dental-clinic/build/Desktop_Qt_6_9_2-Debug/CMakeFiles/list_install_components.dir
+/home/tomas/Proyectos/Dental-clinic/Dental-clinic/Dental-clinic/build/Desktop_Qt_6_9_2-Debug/CMakeFiles/install.dir
+/home/tomas/Proyectos/Dental-clinic/Dental-clinic/Dental-clinic/build/Desktop_Qt_6_9_2-Debug/CMakeFiles/install/local.dir
+/home/tomas/Proyectos/Dental-clinic/Dental-clinic/Dental-clinic/build/Desktop_Qt_6_9_2-Debug/CMakeFiles/install/strip.dir
+/home/tomas/Proyectos/Dental-clinic/Dental-clinic/Dental-clinic/build/Desktop_Qt_6_9_2-Debug/CMakeFiles/Dental-clinic_autogen_timestamp_deps.dir
+/home/tomas/Proyectos/Dental-clinic/Dental-clinic/Dental-clinic/build/Desktop_Qt_6_9_2-Debug/CMakeFiles/Dental-clinic_autogen.dir
