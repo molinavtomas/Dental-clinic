@@ -1,0 +1,22 @@
+{
+	"BUILD_DIR" : "/home/tomas/Proyectos/Dental-clinic/Dental-clinic/Dental-clinic/build/Desktop_Qt_6_9_2-Debug/Dental-clinic_autogen",
+	"CMAKE_BINARY_DIR" : "/home/tomas/Proyectos/Dental-clinic/Dental-clinic/Dental-clinic/build/Desktop_Qt_6_9_2-Debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/tomas/Proyectos/Dental-clinic/Dental-clinic/Dental-clinic/build/Desktop_Qt_6_9_2-Debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/tomas/Proyectos/Dental-clinic",
+	"CMAKE_SOURCE_DIR" : "/home/tomas/Proyectos/Dental-clinic",
+	"CROSS_CONFIG" : false,
+	"GENERATOR" : "Ninja",
+	"INCLUDE_DIR" : "/home/tomas/Proyectos/Dental-clinic/Dental-clinic/Dental-clinic/build/Desktop_Qt_6_9_2-Debug/Dental-clinic_autogen/include",
+	"INPUTS" : [ "/home/tomas/Proyectos/Dental-clinic/style.qss" ],
+	"LOCK_FILE" : "/home/tomas/Proyectos/Dental-clinic/Dental-clinic/Dental-clinic/build/Desktop_Qt_6_9_2-Debug/CMakeFiles/Dental-clinic_autogen.dir/AutoRcc_resources_EWIEGA46WW_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "-name", "resources" ],
+	"OUTPUT_CHECKSUM" : "EWIEGA46WW",
+	"OUTPUT_NAME" : "qrc_resources.cpp",
+	"RCC_EXECUTABLE" : "/home/tomas/Qt/6.9.2/gcc_64/libexec/rcc",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "/home/tomas/Proyectos/Dental-clinic/Dental-clinic/Dental-clinic/build/Desktop_Qt_6_9_2-Debug/CMakeFiles/Dental-clinic_autogen.dir/AutoRcc_resources_EWIEGA46WW_Used.txt",
+	"SOURCE" : "/home/tomas/Proyectos/Dental-clinic/resources.qrc",
+	"USE_BETTER_GRAPH" : true,
+	"VERBOSITY" : 0
+}

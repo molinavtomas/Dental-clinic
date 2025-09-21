@@ -104,6 +104,10 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->btnAgregarPrestacion, &QPushButton::clicked, this, [this]{
         AddPrestacionDialog dlg(this);
         
+        // Asegurar que el diálogo se muestre correctamente
+        dlg.setModal(true);
+        dlg.show();
+        
         if (dlg.exec() == QDialog::Accepted) {
             // Agregar nueva fila a la tabla de FICHAS
             int newRow = ui->tableFichaMedica->rowCount();

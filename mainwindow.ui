@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1062</width>
-    <height>661</height>
+    <height>690</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -39,6 +39,9 @@
        </item>
        <item>
         <widget class="QPushButton" name="btnInicio">
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
          <property name="text">
           <string>INICIO</string>
          </property>
@@ -102,14 +105,13 @@
             <layout class="QVBoxLayout" name="datosPacienteLayout">
              <item>
               <widget class="QLabel" name="labelDatosPacienteTitulo">
-               <property name="text">
-                <string>DATOS DEL PACIENTE</string>
-               </property>
                <property name="font">
                 <font>
-                 <weight>75</weight>
                  <bold>true</bold>
                 </font>
+               </property>
+               <property name="text">
+                <string>DATOS DEL PACIENTE</string>
                </property>
               </widget>
              </item>
@@ -166,6 +168,9 @@
     </item>
     <item>
      <widget class="QFrame" name="ContentFrame">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
       <property name="frameShape">
        <enum>QFrame::Shape::NoFrame</enum>
       </property>
@@ -256,98 +261,112 @@
              </item>
             </layout>
            </item>
-          <item>
-           <layout class="QHBoxLayout" name="inicioTopControls">
-            <item>
-             <widget class="QLabel" name="labelPacientesHoyInicio">
-              <property name="text">
-               <string>Pacientes de hoy (turnos)</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <spacer name="spacerInicioTop">
-              <property name="orientation">
-               <enum>Qt::Orientation::Horizontal</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>40</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-            <item>
-             <widget class="QLabel" name="labelOrdenarInicio">
-              <property name="text">
-               <string>Ordenar por</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QComboBox" name="comboOrdenInicio">
-              <item><property name="text"><string>HORA</string></property></item>
-              <item><property name="text"><string>NOMBRE</string></property></item>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="labelDiaInicio">
-              <property name="text">
-               <string>Día:</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QDateEdit" name="dateEditInicio">
-              <property name="calendarPopup"><bool>true</bool></property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <widget class="QTableWidget" name="tableInicioTurnos"/>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="inicioActions">
-            <item>
-             <spacer name="spacerInicioActionsLeft">
-              <property name="orientation">
-               <enum>Qt::Orientation::Horizontal</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>40</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-            <item>
-             <widget class="QPushButton" name="btnVerFichaInicio">
-              <property name="text"><string>Ver ficha médica</string></property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="btnInicioTurnoInicio">
-              <property name="text"><string>Inicio del turno</string></property>
-             </widget>
-            </item>
-            <item>
-             <spacer name="spacerInicioActionsRight">
-              <property name="orientation">
-               <enum>Qt::Orientation::Horizontal</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>40</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-           </layout>
-          </item>
+           <item>
+            <layout class="QHBoxLayout" name="inicioTopControls">
+             <item>
+              <widget class="QLabel" name="labelPacientesHoyInicio">
+               <property name="text">
+                <string>Pacientes de hoy (turnos)</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="spacerInicioTop">
+               <property name="orientation">
+                <enum>Qt::Orientation::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QLabel" name="labelOrdenarInicio">
+               <property name="text">
+                <string>Ordenar por</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="comboOrdenInicio">
+               <item>
+                <property name="text">
+                 <string>HORA</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>NOMBRE</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="labelDiaInicio">
+               <property name="text">
+                <string>Día:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDateEdit" name="dateEditInicio">
+               <property name="calendarPopup">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QTableWidget" name="tableInicioTurnos"/>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="inicioActions">
+             <item>
+              <spacer name="spacerInicioActionsLeft">
+               <property name="orientation">
+                <enum>Qt::Orientation::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btnVerFichaInicio">
+               <property name="text">
+                <string>Ver ficha médica</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btnInicioTurnoInicio">
+               <property name="text">
+                <string>Inicio del turno</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="spacerInicioActionsRight">
+               <property name="orientation">
+                <enum>Qt::Orientation::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
           </layout>
          </widget>
          <widget class="QWidget" name="pagePacientes">
@@ -430,7 +449,6 @@
               <item row="0" column="5">
                <widget class="QLineEdit" name="editObraSocial"/>
               </item>
-
               <item row="1" column="0">
                <widget class="QLabel" name="labelApellido">
                 <property name="text">
@@ -451,7 +469,6 @@
               <item row="1" column="3">
                <widget class="QLineEdit" name="editOcupacion"/>
               </item>
-
               <item row="2" column="0">
                <widget class="QLabel" name="labelDni">
                 <property name="text">
@@ -472,7 +489,6 @@
               <item row="2" column="3">
                <widget class="QLineEdit" name="editEdad"/>
               </item>
-
               <item row="3" column="0">
                <widget class="QLabel" name="labelTelefono">
                 <property name="text">
@@ -493,7 +509,6 @@
               <item row="3" column="3">
                <widget class="QLineEdit" name="editNacimiento"/>
               </item>
-
               <item row="4" column="0" colspan="6">
                <widget class="QPushButton" name="btnAgregarPaciente">
                 <property name="text">
@@ -506,346 +521,1045 @@
            </item>
           </layout>
          </widget>
-        <widget class="QWidget" name="pageFichas">
-         <layout class="QVBoxLayout" name="fichasLayout">
-          <item>
-           <layout class="QHBoxLayout" name="fichasTopSearch">
-            <item>
-             <spacer name="fichasLeftSpacer">
-              <property name="orientation"><enum>Qt::Orientation::Horizontal</enum></property>
-              <property name="sizeHint" stdset="0"><size><width>40</width><height>20</height></size></property>
-             </spacer>
-            </item>
-            <item>
-             <widget class="QLabel" name="labelBuscarPacientePor">
-              <property name="text"><string>Buscar paciente por</string></property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QComboBox" name="comboBuscarFichas"><item><property name="text"><string>DNI</string></property></item></widget>
-            </item>
-            <item>
-             <widget class="QLineEdit" name="editBuscarFichas"/>
-            </item>
-            <item>
-             <widget class="QPushButton" name="btnBuscarFichas"><property name="text"><string>Buscar</string></property></widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QGridLayout" name="fichasDatosPaciente">
-            <item row="0" column="0"><widget class="QLabel" name="lblDatosPacienteTitulo"><property name="text"><string>DATOS DEL PACIENTE</string></property></widget></item>
-            <item row="1" column="0"><widget class="QLabel" name="lblNombre"><property name="text"><string>NOMBRE:  GUSTAVO</string></property></widget></item>
-            <item row="1" column="1"><widget class="QLabel" name="lblDomicilio"><property name="text"><string>DOMICILIO</string></property></widget></item>
-            <item row="2" column="0"><widget class="QLabel" name="lblApellido"><property name="text"><string>APELLIDO: COSTAS</string></property></widget></item>
-            <item row="2" column="1"><widget class="QLabel" name="lblOcupacion"><property name="text"><string>OCUPACION</string></property></widget></item>
-            <item row="3" column="0"><widget class="QLabel" name="lblDni"><property name="text"><string>DNI: 20202022</string></property></widget></item>
-            <item row="3" column="1"><widget class="QLabel" name="lblEdad"><property name="text"><string>EDAD</string></property></widget></item>
-            <item row="4" column="0"><widget class="QLabel" name="lblTelefono"><property name="text"><string>TELEFONO: 1111111111</string></property></widget></item>
-            <item row="4" column="1"><widget class="QLabel" name="lblNacimiento"><property name="text"><string>NACIMIENTO</string></property></widget></item>
-            <item row="5" column="0"><widget class="QLabel" name="lblObraSocial"><property name="text"><string>OBRA SOCIAL</string></property></widget></item>
-           </layout>
-          </item>
-          <item>
-           <widget class="QLabel" name="labelFichaMedicaTitulo"><property name="text"><string>FICHA MEDICA</string></property></widget>
-          </item>
-          <item>
-           <widget class="QTableWidget" name="tableFichaMedica"/>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="fichasButtons">
-            <item><widget class="QPushButton" name="btnAgregarPrestacion"><property name="text"><string>Agregar prestación</string></property></widget></item>
-            <item><widget class="QPushButton" name="btnEditarFicha"><property name="text"><string>Editar ficha</string></property></widget></item>
-            <item><widget class="QPushButton" name="btnVerTicket"><property name="text"><string>Ver ticket de pago</string></property></widget></item>
-            <item><widget class="QPushButton" name="btnVerHistorialPagos"><property name="text"><string>Ver historial de pagos del cliente</string></property></widget></item>
-           </layout>
-          </item>
-          <item>
-           <widget class="QLabel" name="labelAdjuntosTitulo"><property name="text"><string>ARCHIVOS ADJUNTOS</string></property></widget>
-          </item>
-          <item>
-           <widget class="QTableWidget" name="tableAdjuntos"/>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="adjuntosButtons">
-            <item><spacer name="adjSpacer"><property name="orientation"><enum>Qt::Orientation::Horizontal</enum></property><property name="sizeHint" stdset="0"><size><width>40</width><height>20</height></size></property></spacer></item>
-            <item><widget class="QPushButton" name="btnVerArchivo"><property name="text"><string>Ver archivo</string></property></widget></item>
-           </layout>
-          </item>
-         </layout>
-        </widget>
-        <widget class="QWidget" name="pageTurnos">
-         <layout class="QVBoxLayout" name="turnosLayout">
-          <item>
-           <layout class="QHBoxLayout" name="turnosTopControls">
-            <item>
-             <widget class="QLabel" name="labelPacientesHoyTurnos">
-              <property name="text">
-               <string>Pacientes de hoy (turnos)</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <spacer name="spacerTurnosTop">
-              <property name="orientation">
-               <enum>Qt::Orientation::Horizontal</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>40</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-            <item>
-             <widget class="QLabel" name="labelOrdenarTurnos">
-              <property name="text">
-               <string>Ordenar por</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QComboBox" name="comboOrdenTurnos">
-              <item><property name="text"><string>FINALIZADO</string></property></item>
-              <item><property name="text"><string>HORA</string></property></item>
-              <item><property name="text"><string>NOMBRE</string></property></item>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="labelDiaTurnos">
-              <property name="text">
-               <string>Día:</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QDateEdit" name="dateEditTurnos">
-              <property name="calendarPopup"><bool>true</bool></property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <widget class="QTableWidget" name="tableTurnos"/>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="turnosActions">
-            <item>
-             <widget class="QPushButton" name="btnVerFichaTurno">
-              <property name="text"><string>Ver ficha medica</string></property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="btnReprogramarTurno">
-              <property name="text"><string>Reprogramar turno</string></property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="btnCancelarTurno">
-              <property name="text"><string>Cancelar turno</string></property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="btnEnviarConfirmacion">
-              <property name="text"><string>Enviar mensaje de confirmación</string></property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <widget class="QGroupBox" name="groupNuevoTurno">
-            <property name="title">
-             <string>Generar nuevo turno</string>
-            </property>
-            <layout class="QHBoxLayout" name="nuevoTurnoLayout">
+         <widget class="QWidget" name="pageFichas">
+          <layout class="QVBoxLayout" name="fichasLayout">
+           <item>
+            <layout class="QHBoxLayout" name="fichasTopSearch">
              <item>
-              <widget class="QGroupBox" name="groupBuscarPacienteTurno">
-               <property name="title"><string>Buscar paciente por</string></property>
-               <layout class="QGridLayout" name="gridBuscarTurno">
-                <item row="0" column="0"><widget class="QComboBox" name="comboBuscarPorTurno"><item><property name="text"><string>DNI</string></property></item></widget></item>
-                <item row="0" column="1"><widget class="QLineEdit" name="editBuscarTurno"/></item>
-                <item row="0" column="2"><widget class="QPushButton" name="btnBuscarTurno"><property name="text"><string>Buscar</string></property></widget></item>
+              <spacer name="fichasLeftSpacer">
+               <property name="orientation">
+                <enum>Qt::Orientation::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QLabel" name="labelBuscarPacientePor">
+               <property name="text">
+                <string>Buscar paciente por</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="comboBuscarFichas">
+               <item>
+                <property name="text">
+                 <string>DNI</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="editBuscarFichas"/>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btnBuscarFichas">
+               <property name="text">
+                <string>Buscar</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QGridLayout" name="fichasDatosPaciente">
+             <item row="0" column="0">
+              <widget class="QLabel" name="lblDatosPacienteTitulo">
+               <property name="text">
+                <string>DATOS DEL PACIENTE</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="lblNombre">
+               <property name="text">
+                <string>NOMBRE:  GUSTAVO</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QLabel" name="lblDomicilio">
+               <property name="text">
+                <string>DOMICILIO</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QLabel" name="lblApellido">
+               <property name="text">
+                <string>APELLIDO: COSTAS</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1">
+              <widget class="QLabel" name="lblOcupacion">
+               <property name="text">
+                <string>OCUPACION</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="0">
+              <widget class="QLabel" name="lblDni">
+               <property name="text">
+                <string>DNI: 20202022</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="1">
+              <widget class="QLabel" name="lblEdad">
+               <property name="text">
+                <string>EDAD</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="0">
+              <widget class="QLabel" name="lblTelefono">
+               <property name="text">
+                <string>TELEFONO: 1111111111</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="1">
+              <widget class="QLabel" name="lblNacimiento">
+               <property name="text">
+                <string>NACIMIENTO</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="0">
+              <widget class="QLabel" name="lblObraSocial">
+               <property name="text">
+                <string>OBRA SOCIAL</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QLabel" name="labelFichaMedicaTitulo">
+             <property name="text">
+              <string>FICHA MEDICA</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QTableWidget" name="tableFichaMedica"/>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="fichasButtons">
+             <item>
+              <widget class="QPushButton" name="btnAgregarPrestacion">
+               <property name="text">
+                <string>Agregar prestación</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btnEditarFicha">
+               <property name="text">
+                <string>Editar ficha</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btnVerTicket">
+               <property name="text">
+                <string>Ver ticket de pago</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btnVerHistorialPagos">
+               <property name="text">
+                <string>Ver historial de pagos del cliente</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QLabel" name="labelAdjuntosTitulo">
+             <property name="text">
+              <string>ARCHIVOS ADJUNTOS</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QTableWidget" name="tableAdjuntos"/>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="adjuntosButtons">
+             <item>
+              <spacer name="adjSpacer">
+               <property name="orientation">
+                <enum>Qt::Orientation::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btnVerArchivo">
+               <property name="text">
+                <string>Ver archivo</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="pageTurnos">
+          <layout class="QVBoxLayout" name="turnosLayout">
+           <item>
+            <layout class="QHBoxLayout" name="turnosTopControls">
+             <item>
+              <widget class="QLabel" name="labelPacientesHoyTurnos">
+               <property name="text">
+                <string>Pacientes de hoy (turnos)</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="spacerTurnosTop">
+               <property name="orientation">
+                <enum>Qt::Orientation::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QLabel" name="labelOrdenarTurnos">
+               <property name="text">
+                <string>Ordenar por</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="comboOrdenTurnos">
+               <item>
+                <property name="text">
+                 <string>FINALIZADO</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>HORA</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>NOMBRE</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="labelDiaTurnos">
+               <property name="text">
+                <string>Día:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDateEdit" name="dateEditTurnos">
+               <property name="calendarPopup">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QTableWidget" name="tableTurnos"/>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="turnosActions">
+             <item>
+              <widget class="QPushButton" name="btnVerFichaTurno">
+               <property name="text">
+                <string>Ver ficha medica</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btnReprogramarTurno">
+               <property name="text">
+                <string>Reprogramar turno</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btnCancelarTurno">
+               <property name="text">
+                <string>Cancelar turno</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btnEnviarConfirmacion">
+               <property name="text">
+                <string>Enviar mensaje de confirmación</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="groupNuevoTurno">
+             <property name="title">
+              <string>Generar nuevo turno</string>
+             </property>
+             <layout class="QHBoxLayout" name="nuevoTurnoLayout">
+              <item>
+               <widget class="QGroupBox" name="groupBuscarPacienteTurno">
+                <property name="title">
+                 <string>Buscar paciente por</string>
+                </property>
+                <layout class="QGridLayout" name="gridBuscarTurno">
+                 <item row="0" column="0">
+                  <widget class="QComboBox" name="comboBuscarPorTurno">
+                   <item>
+                    <property name="text">
+                     <string>DNI</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item row="0" column="1">
+                  <widget class="QLineEdit" name="editBuscarTurno"/>
+                 </item>
+                 <item row="0" column="2">
+                  <widget class="QPushButton" name="btnBuscarTurno">
+                   <property name="text">
+                    <string>Buscar</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QGroupBox" name="groupDatosPacienteTurno">
+                <property name="title">
+                 <string>Datos del paciente</string>
+                </property>
+                <layout class="QFormLayout" name="formDatosPacienteTurno">
+                 <item row="0" column="0">
+                  <widget class="QLabel" name="lblDPNombre">
+                   <property name="text">
+                    <string>Nombre:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="1">
+                  <widget class="QLabel" name="valDPNombre">
+                   <property name="text">
+                    <string>GUSTAVO</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="0">
+                  <widget class="QLabel" name="lblDPApellido">
+                   <property name="text">
+                    <string>Apellido:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="1">
+                  <widget class="QLabel" name="valDPApellido">
+                   <property name="text">
+                    <string>COSTAS</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="0">
+                  <widget class="QLabel" name="lblDPDni">
+                   <property name="text">
+                    <string>DNI:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="1">
+                  <widget class="QLabel" name="valDPDni">
+                   <property name="text">
+                    <string>20202022</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="3" column="0">
+                  <widget class="QLabel" name="lblDPTel">
+                   <property name="text">
+                    <string>Teléfono:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="3" column="1">
+                  <widget class="QLabel" name="valDPTel">
+                   <property name="text">
+                    <string>1111111111</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="4" column="0">
+                  <widget class="QLabel" name="lblDPDomicilio">
+                   <property name="text">
+                    <string>Domicilio:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="4" column="1">
+                  <widget class="QLabel" name="valDPDomicilio">
+                   <property name="text">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="5" column="0">
+                  <widget class="QLabel" name="lblDPEdad">
+                   <property name="text">
+                    <string>Edad:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="5" column="1">
+                  <widget class="QLabel" name="valDPEdad">
+                   <property name="text">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="6" column="0">
+                  <widget class="QLabel" name="lblDPNacimiento">
+                   <property name="text">
+                    <string>Nacimiento:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="6" column="1">
+                  <widget class="QLabel" name="valDPNacimiento">
+                   <property name="text">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="7" column="0">
+                  <widget class="QLabel" name="lblDPObra">
+                   <property name="text">
+                    <string>Obra social:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="7" column="1">
+                  <widget class="QLabel" name="valDPObra">
+                   <property name="text">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QGroupBox" name="groupGenerarTurnoNuevo">
+                <property name="title">
+                 <string>Generar turno nuevo</string>
+                </property>
+                <layout class="QGridLayout" name="gridGenerarTurnoNuevo">
+                 <item row="0" column="0">
+                  <widget class="QLabel" name="labelFechaTurno">
+                   <property name="text">
+                    <string>Fecha</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="1">
+                  <widget class="QDateEdit" name="dateTurno"/>
+                 </item>
+                 <item row="1" column="0">
+                  <widget class="QLabel" name="labelHoraTurno">
+                   <property name="text">
+                    <string>Hora</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="1">
+                  <widget class="QTimeEdit" name="timeTurno"/>
+                 </item>
+                 <item row="2" column="0">
+                  <widget class="QLabel" name="labelTratTurno">
+                   <property name="text">
+                    <string>Tratamiento</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="1">
+                  <widget class="QLineEdit" name="editTratTurno"/>
+                 </item>
+                 <item row="3" column="0" colspan="2">
+                  <widget class="QPushButton" name="btnCrearTurno">
+                   <property name="text">
+                    <string>Crear turno</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="pagePagos">
+          <layout class="QVBoxLayout" name="pagosLayout">
+           <item>
+            <layout class="QHBoxLayout" name="historialTopControls">
+             <item>
+              <widget class="QLabel" name="labelHistorialTitulo">
+               <property name="text">
+                <string>HISTORIAL DE PAGOS</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="spacerHistorialLeft">
+               <property name="orientation">
+                <enum>Qt::Orientation::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QLabel" name="labelOrdenarHistorial">
+               <property name="text">
+                <string>ORDENAR POR</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="comboOrdenHistorial">
+               <item>
+                <property name="text">
+                 <string>FINALIZADO</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item>
+              <spacer name="spacerHistorialMid">
+               <property name="orientation">
+                <enum>Qt::Orientation::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QLabel" name="labelBuscarPorHistorial">
+               <property name="text">
+                <string>BUSCAR POR</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="comboBuscarHistorial">
+               <item>
+                <property name="text">
+                 <string>DNI</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="editBuscarHistorial"/>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btnBuscarHistorial">
+               <property name="text">
+                <string>Buscar</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QTableWidget" name="tableHistorialPagos"/>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="historialActions">
+             <item>
+              <spacer name="spacerHistorialActions">
+               <property name="orientation">
+                <enum>Qt::Orientation::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btnActualizarPago">
+               <property name="text">
+                <string>Actualizar pago</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="pendientesTopControls">
+             <item>
+              <widget class="QLabel" name="labelPagosPendientes">
+               <property name="text">
+                <string>PAGOS PENDIENTES</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="spacerPendLeft">
+               <property name="orientation">
+                <enum>Qt::Orientation::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QLabel" name="labelOrdenarPend">
+               <property name="text">
+                <string>ORDENAR POR</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="comboOrdenPend">
+               <item>
+                <property name="text">
+                 <string>FINALIZADO</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item>
+              <spacer name="spacerPendMid">
+               <property name="orientation">
+                <enum>Qt::Orientation::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QLabel" name="labelBuscarPorPend">
+               <property name="text">
+                <string>BUSCAR POR</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="comboBuscarPend">
+               <item>
+                <property name="text">
+                 <string>DNI</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="editBuscarPend"/>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btnBuscarPend">
+               <property name="text">
+                <string>Buscar</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QTableWidget" name="tablePagosPendientes"/>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="pendientesActions">
+             <item>
+              <spacer name="spacerPendActionsLeft">
+               <property name="orientation">
+                <enum>Qt::Orientation::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btnCobrarAhora">
+               <property name="text">
+                <string>Cobrar ahora</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btnRegistrarPagoParcial">
+               <property name="text">
+                <string>Registrar pago parcial</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="spacerPendActionsRight">
+               <property name="orientation">
+                <enum>Qt::Orientation::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="pagosBottomLayout">
+             <item>
+              <widget class="QGroupBox" name="groupGenerarPago">
+               <property name="title">
+                <string>Generar pago nuevo</string>
+               </property>
+               <layout class="QHBoxLayout" name="gridGenerarPago">
+                <item>
+                 <widget class="QGroupBox" name="groupDatosPacientePago">
+                  <property name="title">
+                   <string>Datos del paciente</string>
+                  </property>
+                  <layout class="QFormLayout" name="formDatosPacientePago">
+                   <item row="0" column="0">
+                    <widget class="QLabel" name="lblPPNombre">
+                     <property name="text">
+                      <string>Nombre:  GUSTAVO</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="0">
+                    <widget class="QLabel" name="lblPPApellido">
+                     <property name="text">
+                      <string>Apellido:  COSTAS</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="0">
+                    <widget class="QLabel" name="lblPPDni">
+                     <property name="text">
+                      <string>DNI: 20202022</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="0">
+                    <widget class="QLabel" name="lblPPTel">
+                     <property name="text">
+                      <string>Teléfono: 1111111111</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="4" column="0">
+                    <widget class="QLabel" name="lblPPDom">
+                     <property name="text">
+                      <string>Domicilio</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="5" column="0">
+                    <widget class="QLabel" name="lblPPOcup">
+                     <property name="text">
+                      <string>Ocupación</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="6" column="0">
+                    <widget class="QLabel" name="lblPPEdad">
+                     <property name="text">
+                      <string>Edad</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="7" column="0">
+                    <widget class="QLabel" name="lblPPNac">
+                     <property name="text">
+                      <string>Nacimiento</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="8" column="0">
+                    <widget class="QLabel" name="lblPPObra">
+                     <property name="text">
+                      <string>Obra social</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QGroupBox" name="groupCostoCuotas">
+                  <property name="title">
+                   <string>Costo y cuotas</string>
+                  </property>
+                  <layout class="QGridLayout" name="gridCostoCuotas">
+                   <item row="0" column="0">
+                    <widget class="QLabel" name="labelCostoTotal">
+                     <property name="text">
+                      <string>Costo total</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QLineEdit" name="editCostoTotal"/>
+                   </item>
+                   <item row="1" column="0">
+                    <widget class="QLabel" name="labelGenerarCuotas">
+                     <property name="text">
+                      <string>Generar cuotas</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="0">
+                    <widget class="QLabel" name="labelCantidadCuotas">
+                     <property name="text">
+                      <string>Cantidad</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="1">
+                    <widget class="QComboBox" name="comboCantidadCuotas">
+                     <item>
+                      <property name="text">
+                       <string>1</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>2</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>3</string>
+                      </property>
+                     </item>
+                    </widget>
+                   </item>
+                   <item row="3" column="0">
+                    <widget class="QLabel" name="labelMonto1Pago">
+                     <property name="text">
+                      <string>Monto cuota 1</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="1">
+                    <widget class="QLineEdit" name="editMontoCuota1"/>
+                   </item>
+                   <item row="4" column="0">
+                    <widget class="QLabel" name="labelMonto2Pago">
+                     <property name="text">
+                      <string>Monto cuota 2</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="4" column="1">
+                    <widget class="QLineEdit" name="editMontoCuota2"/>
+                   </item>
+                   <item row="5" column="0">
+                    <widget class="QLabel" name="labelMonto3Pago">
+                     <property name="text">
+                      <string>Monto cuota 3</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="5" column="1">
+                    <widget class="QLineEdit" name="editMontoCuota3"/>
+                   </item>
+                   <item row="6" column="0" colspan="2">
+                    <widget class="QPushButton" name="btnGenerarTicket">
+                     <property name="text">
+                      <string>Generar ticket de pago</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
                </layout>
               </widget>
              </item>
              <item>
-              <widget class="QGroupBox" name="groupDatosPacienteTurno">
-               <property name="title"><string>Datos del paciente</string></property>
-               <layout class="QFormLayout" name="formDatosPacienteTurno">
-                <item row="0" column="0"><widget class="QLabel" name="lblDPNombre"><property name="text"><string>Nombre:</string></property></widget></item>
-                <item row="0" column="1"><widget class="QLabel" name="valDPNombre"><property name="text"><string>GUSTAVO</string></property></widget></item>
-                <item row="1" column="0"><widget class="QLabel" name="lblDPApellido"><property name="text"><string>Apellido:</string></property></widget></item>
-                <item row="1" column="1"><widget class="QLabel" name="valDPApellido"><property name="text"><string>COSTAS</string></property></widget></item>
-                <item row="2" column="0"><widget class="QLabel" name="lblDPDni"><property name="text"><string>DNI:</string></property></widget></item>
-                <item row="2" column="1"><widget class="QLabel" name="valDPDni"><property name="text"><string>20202022</string></property></widget></item>
-                <item row="3" column="0"><widget class="QLabel" name="lblDPTel"><property name="text"><string>Teléfono:</string></property></widget></item>
-                <item row="3" column="1"><widget class="QLabel" name="valDPTel"><property name="text"><string>1111111111</string></property></widget></item>
-                <item row="4" column="0"><widget class="QLabel" name="lblDPDomicilio"><property name="text"><string>Domicilio:</string></property></widget></item>
-                <item row="4" column="1"><widget class="QLabel" name="valDPDomicilio"><property name="text"><string></string></property></widget></item>
-                <item row="5" column="0"><widget class="QLabel" name="lblDPEdad"><property name="text"><string>Edad:</string></property></widget></item>
-                <item row="5" column="1"><widget class="QLabel" name="valDPEdad"><property name="text"><string></string></property></widget></item>
-                <item row="6" column="0"><widget class="QLabel" name="lblDPNacimiento"><property name="text"><string>Nacimiento:</string></property></widget></item>
-                <item row="6" column="1"><widget class="QLabel" name="valDPNacimiento"><property name="text"><string></string></property></widget></item>
-                <item row="7" column="0"><widget class="QLabel" name="lblDPObra"><property name="text"><string>Obra social:</string></property></widget></item>
-                <item row="7" column="1"><widget class="QLabel" name="valDPObra"><property name="text"><string></string></property></widget></item>
-               </layout>
-              </widget>
-             </item>
-             <item>
-              <widget class="QGroupBox" name="groupGenerarTurnoNuevo">
-               <property name="title"><string>Generar turno nuevo</string></property>
-               <layout class="QGridLayout" name="gridGenerarTurnoNuevo">
-                <item row="0" column="0"><widget class="QLabel" name="labelFechaTurno"><property name="text"><string>Fecha</string></property></widget></item>
-                <item row="0" column="1"><widget class="QDateEdit" name="dateTurno"/></item>
-                <item row="1" column="0"><widget class="QLabel" name="labelHoraTurno"><property name="text"><string>Hora</string></property></widget></item>
-                <item row="1" column="1"><widget class="QTimeEdit" name="timeTurno"/></item>
-                <item row="2" column="0"><widget class="QLabel" name="labelTratTurno"><property name="text"><string>Tratamiento</string></property></widget></item>
-                <item row="2" column="1"><widget class="QLineEdit" name="editTratTurno"/></item>
-                <item row="3" column="0" colspan="2"><widget class="QPushButton" name="btnCrearTurno"><property name="text"><string>Crear turno</string></property></widget></item>
+              <widget class="QGroupBox" name="groupCobrarTicket">
+               <property name="title">
+                <string>Cobrar ticket generado</string>
+               </property>
+               <layout class="QHBoxLayout" name="gridCobrarTicket">
+                <item>
+                 <widget class="QGroupBox" name="groupDatosCobro">
+                  <property name="title">
+                   <string>Datos del paciente</string>
+                  </property>
+                  <layout class="QFormLayout" name="formDatosCobro">
+                   <item row="0" column="0">
+                    <widget class="QLabel" name="lblCPNombre">
+                     <property name="text">
+                      <string>Nombre:  GUSTAVO</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="0">
+                    <widget class="QLabel" name="lblCPApellido">
+                     <property name="text">
+                      <string>Apellido:  COSTAS</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="0">
+                    <widget class="QLabel" name="lblCPDni">
+                     <property name="text">
+                      <string>DNI: 20202022</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="0">
+                    <widget class="QLabel" name="lblCPTel">
+                     <property name="text">
+                      <string>Teléfono: 1111111111</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="4" column="0">
+                    <widget class="QLabel" name="lblCPDom">
+                     <property name="text">
+                      <string>Domicilio</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="5" column="0">
+                    <widget class="QLabel" name="lblCPOcup">
+                     <property name="text">
+                      <string>Ocupación</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="6" column="0">
+                    <widget class="QLabel" name="lblCPEdad">
+                     <property name="text">
+                      <string>Edad</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="7" column="0">
+                    <widget class="QLabel" name="lblCPNac">
+                     <property name="text">
+                      <string>Nacimiento</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="8" column="0">
+                    <widget class="QLabel" name="lblCPObra">
+                     <property name="text">
+                      <string>Obra social</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QGroupBox" name="groupCobro">
+                  <property name="title">
+                   <string>Pago</string>
+                  </property>
+                  <layout class="QGridLayout" name="gridCobro">
+                   <item row="0" column="0">
+                    <widget class="QLabel" name="labelCostoTotalCobro">
+                     <property name="text">
+                      <string>Costo total</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QLineEdit" name="editCostoTotalCobro"/>
+                   </item>
+                   <item row="1" column="0">
+                    <widget class="QLabel" name="labelPago">
+                     <property name="text">
+                      <string>Pago</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="1">
+                    <widget class="QLineEdit" name="editPago"/>
+                   </item>
+                   <item row="2" column="0">
+                    <widget class="QLabel" name="labelFormaDePago">
+                     <property name="text">
+                      <string>Forma de pago</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="1">
+                    <widget class="QLineEdit" name="editFormaDePago"/>
+                   </item>
+                   <item row="3" column="0" colspan="2">
+                    <widget class="QPushButton" name="btnCobrar">
+                     <property name="text">
+                      <string>Cobrar</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
                </layout>
               </widget>
              </item>
             </layout>
-           </widget>
-          </item>
-         </layout>
-        </widget>
-         <widget class="QWidget" name="pagePagos">
-          <layout class="QVBoxLayout" name="pagosLayout">
-          <item>
-           <layout class="QHBoxLayout" name="historialTopControls">
-            <item><widget class="QLabel" name="labelHistorialTitulo"><property name="text"><string>HISTORIAL DE PAGOS</string></property></widget></item>
-            <item><spacer name="spacerHistorialLeft"><property name="orientation"><enum>Qt::Orientation::Horizontal</enum></property><property name="sizeHint" stdset="0"><size><width>40</width><height>20</height></size></property></spacer></item>
-            <item><widget class="QLabel" name="labelOrdenarHistorial"><property name="text"><string>ORDENAR POR</string></property></widget></item>
-            <item><widget class="QComboBox" name="comboOrdenHistorial"><item><property name="text"><string>FINALIZADO</string></property></item></widget></item>
-            <item><spacer name="spacerHistorialMid"><property name="orientation"><enum>Qt::Orientation::Horizontal</enum></property><property name="sizeHint" stdset="0"><size><width>20</width><height>20</height></size></property></spacer></item>
-            <item><widget class="QLabel" name="labelBuscarPorHistorial"><property name="text"><string>BUSCAR POR</string></property></widget></item>
-            <item><widget class="QComboBox" name="comboBuscarHistorial"><item><property name="text"><string>DNI</string></property></item></widget></item>
-            <item><widget class="QLineEdit" name="editBuscarHistorial"/></item>
-            <item><widget class="QPushButton" name="btnBuscarHistorial"><property name="text"><string>Buscar</string></property></widget></item>
-           </layout>
-          </item>
-          <item>
-           <widget class="QTableWidget" name="tableHistorialPagos"/>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="historialActions">
-            <item><spacer name="spacerHistorialActions"><property name="orientation"><enum>Qt::Orientation::Horizontal</enum></property><property name="sizeHint" stdset="0"><size><width>40</width><height>20</height></size></property></spacer></item>
-            <item><widget class="QPushButton" name="btnActualizarPago"><property name="text"><string>Actualizar pago</string></property></widget></item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="pendientesTopControls">
-            <item><widget class="QLabel" name="labelPagosPendientes"><property name="text"><string>PAGOS PENDIENTES</string></property></widget></item>
-            <item><spacer name="spacerPendLeft"><property name="orientation"><enum>Qt::Orientation::Horizontal</enum></property><property name="sizeHint" stdset="0"><size><width>40</width><height>20</height></size></property></spacer></item>
-            <item><widget class="QLabel" name="labelOrdenarPend"><property name="text"><string>ORDENAR POR</string></property></widget></item>
-            <item><widget class="QComboBox" name="comboOrdenPend"><item><property name="text"><string>FINALIZADO</string></property></item></widget></item>
-            <item><spacer name="spacerPendMid"><property name="orientation"><enum>Qt::Orientation::Horizontal</enum></property><property name="sizeHint" stdset="0"><size><width>20</width><height>20</height></size></property></spacer></item>
-            <item><widget class="QLabel" name="labelBuscarPorPend"><property name="text"><string>BUSCAR POR</string></property></widget></item>
-            <item><widget class="QComboBox" name="comboBuscarPend"><item><property name="text"><string>DNI</string></property></item></widget></item>
-            <item><widget class="QLineEdit" name="editBuscarPend"/></item>
-            <item><widget class="QPushButton" name="btnBuscarPend"><property name="text"><string>Buscar</string></property></widget></item>
-           </layout>
-          </item>
-          <item>
-           <widget class="QTableWidget" name="tablePagosPendientes"/>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="pendientesActions">
-            <item><spacer name="spacerPendActionsLeft"><property name="orientation"><enum>Qt::Orientation::Horizontal</enum></property><property name="sizeHint" stdset="0"><size><width>40</width><height>20</height></size></property></spacer></item>
-            <item><widget class="QPushButton" name="btnCobrarAhora"><property name="text"><string>Cobrar ahora</string></property></widget></item>
-            <item><widget class="QPushButton" name="btnRegistrarPagoParcial"><property name="text"><string>Registrar pago parcial</string></property></widget></item>
-            <item><spacer name="spacerPendActionsRight"><property name="orientation"><enum>Qt::Orientation::Horizontal</enum></property><property name="sizeHint" stdset="0"><size><width>40</width><height>20</height></size></property></spacer></item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="pagosBottomLayout">
-            <item>
-             <widget class="QGroupBox" name="groupGenerarPago">
-              <property name="title">
-               <string>Generar pago nuevo</string>
-              </property>
-              <layout class="QHBoxLayout" name="gridGenerarPago">
-               <item>
-                <widget class="QGroupBox" name="groupDatosPacientePago">
-                 <property name="title"><string>Datos del paciente</string></property>
-                 <layout class="QFormLayout" name="formDatosPacientePago">
-                  <item row="0" column="0"><widget class="QLabel" name="lblPPNombre"><property name="text"><string>Nombre:  GUSTAVO</string></property></widget></item>
-                  <item row="1" column="0"><widget class="QLabel" name="lblPPApellido"><property name="text"><string>Apellido:  COSTAS</string></property></widget></item>
-                  <item row="2" column="0"><widget class="QLabel" name="lblPPDni"><property name="text"><string>DNI: 20202022</string></property></widget></item>
-                  <item row="3" column="0"><widget class="QLabel" name="lblPPTel"><property name="text"><string>Teléfono: 1111111111</string></property></widget></item>
-                  <item row="4" column="0"><widget class="QLabel" name="lblPPDom"><property name="text"><string>Domicilio</string></property></widget></item>
-                  <item row="5" column="0"><widget class="QLabel" name="lblPPOcup"><property name="text"><string>Ocupación</string></property></widget></item>
-                  <item row="6" column="0"><widget class="QLabel" name="lblPPEdad"><property name="text"><string>Edad</string></property></widget></item>
-                  <item row="7" column="0"><widget class="QLabel" name="lblPPNac"><property name="text"><string>Nacimiento</string></property></widget></item>
-                  <item row="8" column="0"><widget class="QLabel" name="lblPPObra"><property name="text"><string>Obra social</string></property></widget></item>
-                 </layout>
-                </widget>
-               </item>
-               <item>
-                <widget class="QGroupBox" name="groupCostoCuotas">
-                 <property name="title"><string>Costo y cuotas</string></property>
-                 <layout class="QGridLayout" name="gridCostoCuotas">
-                  <item row="0" column="0"><widget class="QLabel" name="labelCostoTotal"><property name="text"><string>Costo total</string></property></widget></item>
-                  <item row="0" column="1"><widget class="QLineEdit" name="editCostoTotal"/></item>
-                  <item row="1" column="0"><widget class="QLabel" name="labelGenerarCuotas"><property name="text"><string>Generar cuotas</string></property></widget></item>
-                  <item row="2" column="0"><widget class="QLabel" name="labelCantidadCuotas"><property name="text"><string>Cantidad</string></property></widget></item>
-                  <item row="2" column="1"><widget class="QComboBox" name="comboCantidadCuotas"><item><property name="text"><string>1</string></property></item><item><property name="text"><string>2</string></property></item><item><property name="text"><string>3</string></property></item></widget></item>
-                  <item row="3" column="0"><widget class="QLabel" name="labelMonto1Pago"><property name="text"><string>Monto cuota 1</string></property></widget></item>
-                  <item row="3" column="1"><widget class="QLineEdit" name="editMontoCuota1"/></item>
-                  <item row="4" column="0"><widget class="QLabel" name="labelMonto2Pago"><property name="text"><string>Monto cuota 2</string></property></widget></item>
-                  <item row="4" column="1"><widget class="QLineEdit" name="editMontoCuota2"/></item>
-                  <item row="5" column="0"><widget class="QLabel" name="labelMonto3Pago"><property name="text"><string>Monto cuota 3</string></property></widget></item>
-                  <item row="5" column="1"><widget class="QLineEdit" name="editMontoCuota3"/></item>
-                  <item row="6" column="0" colspan="2"><widget class="QPushButton" name="btnGenerarTicket"><property name="text"><string>Generar ticket de pago</string></property></widget></item>
-                 </layout>
-                </widget>
-               </item>
-              </layout>
-             </widget>
-            </item>
-            <item>
-             <widget class="QGroupBox" name="groupCobrarTicket">
-              <property name="title">
-               <string>Cobrar ticket generado</string>
-      </property>
-              <layout class="QHBoxLayout" name="gridCobrarTicket">
-               <item>
-                <widget class="QGroupBox" name="groupDatosCobro">
-                 <property name="title"><string>Datos del paciente</string></property>
-                 <layout class="QFormLayout" name="formDatosCobro">
-                  <item row="0" column="0"><widget class="QLabel" name="lblCPNombre"><property name="text"><string>Nombre:  GUSTAVO</string></property></widget></item>
-                  <item row="1" column="0"><widget class="QLabel" name="lblCPApellido"><property name="text"><string>Apellido:  COSTAS</string></property></widget></item>
-                  <item row="2" column="0"><widget class="QLabel" name="lblCPDni"><property name="text"><string>DNI: 20202022</string></property></widget></item>
-                  <item row="3" column="0"><widget class="QLabel" name="lblCPTel"><property name="text"><string>Teléfono: 1111111111</string></property></widget></item>
-                  <item row="4" column="0"><widget class="QLabel" name="lblCPDom"><property name="text"><string>Domicilio</string></property></widget></item>
-                  <item row="5" column="0"><widget class="QLabel" name="lblCPOcup"><property name="text"><string>Ocupación</string></property></widget></item>
-                  <item row="6" column="0"><widget class="QLabel" name="lblCPEdad"><property name="text"><string>Edad</string></property></widget></item>
-                  <item row="7" column="0"><widget class="QLabel" name="lblCPNac"><property name="text"><string>Nacimiento</string></property></widget></item>
-                  <item row="8" column="0"><widget class="QLabel" name="lblCPObra"><property name="text"><string>Obra social</string></property></widget></item>
-                 </layout>
-                </widget>
-               </item>
-               <item>
-                <widget class="QGroupBox" name="groupCobro">
-                 <property name="title"><string>Pago</string></property>
-                 <layout class="QGridLayout" name="gridCobro">
-                  <item row="0" column="0"><widget class="QLabel" name="labelCostoTotalCobro"><property name="text"><string>Costo total</string></property></widget></item>
-                  <item row="0" column="1"><widget class="QLineEdit" name="editCostoTotalCobro"/></item>
-                  <item row="1" column="0"><widget class="QLabel" name="labelPago"><property name="text"><string>Pago</string></property></widget></item>
-                  <item row="1" column="1"><widget class="QLineEdit" name="editPago"/></item>
-                  <item row="2" column="0"><widget class="QLabel" name="labelFormaDePago"><property name="text"><string>Forma de pago</string></property></widget></item>
-                  <item row="2" column="1"><widget class="QLineEdit" name="editFormaDePago"/></item>
-                  <item row="3" column="0" colspan="2"><widget class="QPushButton" name="btnCobrar"><property name="text"><string>Cobrar</string></property></widget></item>
-                 </layout>
-                </widget>
-               </item>
-              </layout>
-             </widget>
-            </item>
-           </layout>
-          </item>
+           </item>
           </layout>
          </widget>
         </widget>

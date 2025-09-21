@@ -9,6 +9,12 @@ AddPrestacionDialog::AddPrestacionDialog(QWidget *parent)
     ui->setupUi(this);
     setWindowTitle("Nueva prestación");
     
+    // Configurar propiedades del diálogo para evitar conflictos de renderizado
+    setModal(true);
+    setWindowFlags(Qt::Dialog | Qt::WindowTitleHint | Qt::WindowCloseButtonHint);
+    setAttribute(Qt::WA_DeleteOnClose, false);
+    setFixedSize(600, 400);
+    
     // Conectar botones
     connect(ui->btnAgregar, &QPushButton::clicked, this, &QDialog::accept);
     connect(ui->btnAdjuntar, &QPushButton::clicked, this, [this]{

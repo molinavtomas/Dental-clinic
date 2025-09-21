@@ -1,0 +1,20 @@
+{
+	"BUILD_DIR" : "/home/tomas/Proyectos/Dental-clinic/build/Dental-clinic_autogen",
+	"CMAKE_BINARY_DIR" : "/home/tomas/Proyectos/Dental-clinic/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/tomas/Proyectos/Dental-clinic/build",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/tomas/Proyectos/Dental-clinic",
+	"CMAKE_SOURCE_DIR" : "/home/tomas/Proyectos/Dental-clinic",
+	"GENERATOR" : "Unix Makefiles",
+	"INCLUDE_DIR" : "/home/tomas/Proyectos/Dental-clinic/build/Dental-clinic_autogen/include",
+	"INPUTS" : [ "/home/tomas/Proyectos/Dental-clinic/style.qss" ],
+	"LOCK_FILE" : "/home/tomas/Proyectos/Dental-clinic/build/CMakeFiles/Dental-clinic_autogen.dir/AutoRcc_resources_EWIEGA46WW_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "-name", "resources" ],
+	"OUTPUT_CHECKSUM" : "EWIEGA46WW",
+	"OUTPUT_NAME" : "qrc_resources.cpp",
+	"RCC_EXECUTABLE" : "/usr/lib/qt6/libexec/rcc",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "/home/tomas/Proyectos/Dental-clinic/build/CMakeFiles/Dental-clinic_autogen.dir/AutoRcc_resources_EWIEGA46WW_Used.txt",
+	"SOURCE" : "/home/tomas/Proyectos/Dental-clinic/resources.qrc",
+	"VERBOSITY" : 0
+}
