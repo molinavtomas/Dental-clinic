@@ -2,6 +2,7 @@
 #include "./ui_mainwindow.h"
 #include <QHeaderView>
 #include <QDate>
+#include <QTime>
 #include <QMessageBox>
 #include "addprestaciondialog.h"
 #include "editpacientedialog.h"
@@ -15,7 +16,6 @@ MainWindow::MainWindow(QWidget *parent)
     // KPI labels (Inicio page)
     ui->labelPendientes->setText(QString::number(7));
     ui->labelGananciasHoy->setText("100000");
-    ui->labelGananciasMes->setText("100000");
 
     // Inicio page table
     ui->tableInicioTurnos->setColumnCount(7);
@@ -45,12 +45,45 @@ MainWindow::MainWindow(QWidget *parent)
         ui->tableInicioTurnos->setItem(r,6,new QTableWidgetItem(t.msg));
     }
 
-    // Sidebar navigation to stacked pages
-    connect(ui->btnInicio, &QPushButton::clicked, this, [this]{ ui->stackedWidget->setCurrentWidget(ui->pageInicio); });
-    connect(ui->btnPacientes, &QPushButton::clicked, this, [this]{ ui->stackedWidget->setCurrentWidget(ui->pagePacientes); });
-    connect(ui->btnFichas, &QPushButton::clicked, this, [this]{ ui->stackedWidget->setCurrentWidget(ui->pageFichas); });
-    connect(ui->btnTurnos, &QPushButton::clicked, this, [this]{ ui->stackedWidget->setCurrentWidget(ui->pageTurnos); });
-    connect(ui->btnPagos, &QPushButton::clicked, this, [this]{ ui->stackedWidget->setCurrentWidget(ui->pagePagos); });
+    // Orden de llegada table
+    ui->tableOrdenLlegada->setColumnCount(5);
+    ui->tableOrdenLlegada->setHorizontalHeaderLabels({
+        "Posición","Nombre","DNI","Hora llegada","Estado"
+    });
+    ui->tableOrdenLlegada->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+    
+    // Sample data for Orden de llegada table
+    struct OrdenLlegada { int posicion; QString nombre; QString dni; QString hora; QString estado; };
+    const QList<OrdenLlegada> ordenLlegada = {
+        {1, "CARLOS", "12345678", "8:30AM", "ESPERANDO"},
+        {2, "ANA", "87654321", "8:45AM", "EN CONSULTA"},
+        {3, "LUIS", "11223344", "9:15AM", "ESPERANDO"},
+        {4, "SOFIA", "55667788", "9:30AM", "ESPERANDO"},
+        {5, "PEDRO", "99887766", "10:00AM", "ESPERANDO"}
+    };
+    ui->tableOrdenLlegada->setRowCount(ordenLlegada.size());
+    for (int r=0; r<ordenLlegada.size(); ++r){
+        const auto &o = ordenLlegada[r];
+        ui->tableOrdenLlegada->setItem(r,0,new QTableWidgetItem(QString::number(o.posicion)));
+        ui->tableOrdenLlegada->setItem(r,1,new QTableWidgetItem(o.nombre));
+        ui->tableOrdenLlegada->setItem(r,2,new QTableWidgetItem(o.dni));
+        ui->tableOrdenLlegada->setItem(r,3,new QTableWidgetItem(o.hora));
+        ui->tableOrdenLlegada->setItem(r,4,new QTableWidgetItem(o.estado));
+    }
+
+    // Sidebar navigation to stacked pages - Icon-only buttons
+    connect(ui->btnInicio_1, &QPushButton::clicked, this, [this]{ ui->stackedWidget->setCurrentWidget(ui->pageInicio); });
+    connect(ui->btnPacientes_1, &QPushButton::clicked, this, [this]{ ui->stackedWidget->setCurrentWidget(ui->pagePacientes); });
+    connect(ui->btnFichas_1, &QPushButton::clicked, this, [this]{ ui->stackedWidget->setCurrentWidget(ui->pageFichas); });
+    connect(ui->btnTurnos_1, &QPushButton::clicked, this, [this]{ ui->stackedWidget->setCurrentWidget(ui->pageTurnos); });
+    connect(ui->btnPagos_1, &QPushButton::clicked, this, [this]{ ui->stackedWidget->setCurrentWidget(ui->pagePagos); });
+    
+    // Sidebar navigation to stacked pages - Full menu buttons
+    connect(ui->btnInicio_2, &QPushButton::clicked, this, [this]{ ui->stackedWidget->setCurrentWidget(ui->pageInicio); });
+    connect(ui->btnPacientes_2, &QPushButton::clicked, this, [this]{ ui->stackedWidget->setCurrentWidget(ui->pagePacientes); });
+    connect(ui->btnFichas_2, &QPushButton::clicked, this, [this]{ ui->stackedWidget->setCurrentWidget(ui->pageFichas); });
+    connect(ui->btnTurnos_2, &QPushButton::clicked, this, [this]{ ui->stackedWidget->setCurrentWidget(ui->pageTurnos); });
+    connect(ui->btnPagos_2, &QPushButton::clicked, this, [this]{ ui->stackedWidget->setCurrentWidget(ui->pagePagos); });
 
     // Pacientes page table
     ui->tablePacientes->setColumnCount(5);
@@ -158,6 +191,69 @@ MainWindow::MainWindow(QWidget *parent)
             
             // Cambiar a pestaña FICHAS
             ui->stackedWidget->setCurrentWidget(ui->pageFichas);
+        }
+    });
+
+    // Inicio del turno desde ORDEN DE LLEGADA
+    connect(ui->btnInicioTurnoOrdenLlegada, &QPushButton::clicked, this, [this]{
+        int currentRow = ui->tableOrdenLlegada->currentRow();
+        if (currentRow >= 0) {
+            QString nombre = ui->tableOrdenLlegada->item(currentRow, 1)->text();
+            QString dni = ui->tableOrdenLlegada->item(currentRow, 2)->text();
+            
+            // Cargar datos en el sidebar "PACIENTE EN CONSULTORIO"
+            ui->labelPacienteNombre->setText("NOMBRE: " + nombre);
+            ui->labelPacienteDni->setText("DNI: " + dni);
+            
+            // Mostrar mensaje de confirmación
+            QMessageBox::information(
+                this,
+                "Turno iniciado",
+                QString("Se ha iniciado el turno para:\n\nNombre: %1\nDNI: %2\n\nLos datos se han cargado en 'Paciente en consultorio'.").arg(nombre, dni)
+            );
+        } else {
+            QMessageBox::warning(
+                this,
+                "Selección requerida",
+                "Por favor, seleccione un paciente de la tabla 'Orden de llegada' para iniciar el turno."
+            );
+        }
+    });
+
+    // Agregar a lista de espera desde PACIENTES DE HOY
+    connect(ui->btnAgregarListaEspera, &QPushButton::clicked, this, [this]{
+        int currentRow = ui->tableInicioTurnos->currentRow();
+        if (currentRow >= 0) {
+            QString nombre = ui->tableInicioTurnos->item(currentRow, 1)->text();
+            QString dni = ui->tableInicioTurnos->item(currentRow, 2)->text();
+            QString hora = QTime::currentTime().toString("hh:mmAP");
+            
+            // Agregar nueva fila a la tabla de Orden de llegada
+            int newRow = ui->tableOrdenLlegada->rowCount();
+            ui->tableOrdenLlegada->insertRow(newRow);
+            
+            // Obtener la próxima posición
+            int nextPosicion = newRow + 1;
+            
+            // Llenar la tabla con los datos del paciente
+            ui->tableOrdenLlegada->setItem(newRow, 0, new QTableWidgetItem(QString::number(nextPosicion)));
+            ui->tableOrdenLlegada->setItem(newRow, 1, new QTableWidgetItem(nombre));
+            ui->tableOrdenLlegada->setItem(newRow, 2, new QTableWidgetItem(dni));
+            ui->tableOrdenLlegada->setItem(newRow, 3, new QTableWidgetItem(hora));
+            ui->tableOrdenLlegada->setItem(newRow, 4, new QTableWidgetItem("ESPERANDO"));
+            
+            // Mostrar mensaje de confirmación
+            QMessageBox::information(
+                this,
+                "Agregado a lista de espera",
+                QString("El paciente %1 (DNI: %2) ha sido agregado a la lista de espera en la posición %3.").arg(nombre, dni, QString::number(nextPosicion))
+            );
+        } else {
+            QMessageBox::warning(
+                this,
+                "Selección requerida",
+                "Por favor, seleccione un paciente de la tabla 'Pacientes de hoy (turnos)' para agregar a la lista de espera."
+            );
         }
     });
 

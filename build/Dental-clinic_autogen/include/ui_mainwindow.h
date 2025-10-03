@@ -85,8 +85,14 @@ public:
     QHBoxLayout *inicioActions;
     QSpacerItem *spacerInicioActionsLeft;
     QPushButton *btnVerFichaInicio;
-    QPushButton *btnInicioTurnoInicio;
+    QPushButton *btnAgregarListaEspera;
     QSpacerItem *spacerInicioActionsRight;
+    QLabel *labelOrdenLlegadaTitulo;
+    QTableWidget *tableOrdenLlegada;
+    QHBoxLayout *ordenLlegadaActions;
+    QSpacerItem *spacerOrdenLlegadaLeft;
+    QPushButton *btnInicioTurnoOrdenLlegada;
+    QSpacerItem *spacerOrdenLlegadaRight;
     QWidget *pagePacientes;
     QVBoxLayout *pacientesLayout;
     QHBoxLayout *pacientesSearchLayout;
@@ -503,10 +509,10 @@ public:
 
         inicioActions->addWidget(btnVerFichaInicio);
 
-        btnInicioTurnoInicio = new QPushButton(pageInicio);
-        btnInicioTurnoInicio->setObjectName("btnInicioTurnoInicio");
+        btnAgregarListaEspera = new QPushButton(pageInicio);
+        btnAgregarListaEspera->setObjectName("btnAgregarListaEspera");
 
-        inicioActions->addWidget(btnInicioTurnoInicio);
+        inicioActions->addWidget(btnAgregarListaEspera);
 
         spacerInicioActionsRight = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
@@ -514,6 +520,38 @@ public:
 
 
         inicioLayout->addLayout(inicioActions);
+
+        labelOrdenLlegadaTitulo = new QLabel(pageInicio);
+        labelOrdenLlegadaTitulo->setObjectName("labelOrdenLlegadaTitulo");
+        QFont font1;
+        font1.setPointSize(14);
+        font1.setBold(true);
+        labelOrdenLlegadaTitulo->setFont(font1);
+
+        inicioLayout->addWidget(labelOrdenLlegadaTitulo);
+
+        tableOrdenLlegada = new QTableWidget(pageInicio);
+        tableOrdenLlegada->setObjectName("tableOrdenLlegada");
+
+        inicioLayout->addWidget(tableOrdenLlegada);
+
+        ordenLlegadaActions = new QHBoxLayout();
+        ordenLlegadaActions->setObjectName("ordenLlegadaActions");
+        spacerOrdenLlegadaLeft = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        ordenLlegadaActions->addItem(spacerOrdenLlegadaLeft);
+
+        btnInicioTurnoOrdenLlegada = new QPushButton(pageInicio);
+        btnInicioTurnoOrdenLlegada->setObjectName("btnInicioTurnoOrdenLlegada");
+
+        ordenLlegadaActions->addWidget(btnInicioTurnoOrdenLlegada);
+
+        spacerOrdenLlegadaRight = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        ordenLlegadaActions->addItem(spacerOrdenLlegadaRight);
+
+
+        inicioLayout->addLayout(ordenLlegadaActions);
 
         stackedWidget->addWidget(pageInicio);
         pagePacientes = new QWidget();
@@ -1484,7 +1522,9 @@ public:
 
         labelDiaInicio->setText(QCoreApplication::translate("MainWindow", "D\303\255a:", nullptr));
         btnVerFichaInicio->setText(QCoreApplication::translate("MainWindow", "Ver ficha m\303\251dica", nullptr));
-        btnInicioTurnoInicio->setText(QCoreApplication::translate("MainWindow", "Inicio del turno", nullptr));
+        btnAgregarListaEspera->setText(QCoreApplication::translate("MainWindow", "Agregar a lista de espera", nullptr));
+        labelOrdenLlegadaTitulo->setText(QCoreApplication::translate("MainWindow", "ORDEN DE LLEGADA", nullptr));
+        btnInicioTurnoOrdenLlegada->setText(QCoreApplication::translate("MainWindow", "Inicio del turno", nullptr));
         btnBuscarPaciente->setText(QCoreApplication::translate("MainWindow", "Buscar", nullptr));
         btnVerFichaPac->setText(QCoreApplication::translate("MainWindow", "Ver ficha m\303\251dica", nullptr));
         btnEditarPaciente->setText(QCoreApplication::translate("MainWindow", "Editar paciente", nullptr));

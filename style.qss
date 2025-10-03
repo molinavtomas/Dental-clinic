@@ -137,7 +137,7 @@ QHBoxLayout#kpiLayout {
 /* Tarjetas de métricas (QGroupBox) */
 QGroupBox#groupPendientes,
 QGroupBox#groupGananciasHoy,
-QGroupBox#groupGananciasMes {
+QGroupBox#groupPacienteEnConsultorio {
     background-color: white;
     border: none;
     border-radius: 16px;
@@ -150,8 +150,7 @@ QGroupBox#groupGananciasMes {
 
 /* Títulos de las tarjetas */
 QGroupBox#groupPendientes::title,
-QGroupBox#groupGananciasHoy::title,
-QGroupBox#groupGananciasMes::title {
+QGroupBox#groupGananciasHoy::title{
     subcontrol-origin: margin;
     left: 0px;
     padding: 0px 0px 12px 0px;
@@ -162,15 +161,13 @@ QGroupBox#groupGananciasMes::title {
 
 /* Efecto hover para las tarjetas */
 QGroupBox#groupPendientes:hover,
-QGroupBox#groupGananciasHoy:hover,
-QGroupBox#groupGananciasMes:hover {
+QGroupBox#groupGananciasHoy:hover{
     background-color: #fafbff;
 }
 
 /* Labels dentro de las tarjetas de métricas */
 QGroupBox#groupPendientes QLabel,
-QGroupBox#groupGananciasHoy QLabel,
-QGroupBox#groupGananciasMes QLabel {
+QGroupBox#groupGananciasHoy QLabel{
     color: #3a4a5c;
     font-size: 28px;
     font-weight: 700;
@@ -199,18 +196,19 @@ QGroupBox#groupGananciasHoy::title {
 }
 
 /* Estilo específico para la tarjeta de ganancias mes */
-QGroupBox#groupGananciasMes {
+QGroupBox#groupPacienteEnConsultorio {
     border-left: 4px solid #6ed5b7;
 }
 
-QGroupBox#groupGananciasMes::title {
+QGroupBox#groupPacienteEnConsultorio::title {
     color: #6ed5b7;
+    font-size: 10px;
 }
 
 /* Layout vertical dentro de las tarjetas */
 QGroupBox#groupPendientes QVBoxLayout,
 QGroupBox#groupGananciasHoy QVBoxLayout,
-QGroupBox#groupGananciasMes QVBoxLayout {
+QGroupBox#groupPacienteEnConsultorio QVBoxLayout {
     spacing: 8px;
     margin: 0px;
     padding: 0px;
@@ -219,7 +217,7 @@ QGroupBox#groupGananciasMes QVBoxLayout {
 /* Sombra sutil para las tarjetas (simulada con border) */
 QGroupBox#groupPendientes,
 QGroupBox#groupGananciasHoy,
-QGroupBox#groupGananciasMes {
+QGroupBox#groupPacienteEnConsultorio {
     border: 1px solid rgba(42, 59, 76, 0.08);
 }
 
@@ -241,6 +239,13 @@ QHBoxLayout#inicioTopControls {
 QLabel#labelPacientesHoyInicio,
 QLabel#labelOrdenarInicio,
 QLabel#labelDiaInicio {
+    color: #3a4a5c;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* Título de orden de llegada */
+QLabel#labelOrdenLlegadaTitulo {
     color: #3a4a5c;
     font-weight: 600;
     font-size: 14px;
@@ -314,6 +319,28 @@ QTableWidget#tableInicioTurnos {
     font-size: 13px;
 }
 
+/* Tabla de orden de llegada */
+QTableWidget#tableOrdenLlegada {
+    background-color: white;
+    border: 1px solid rgba(42, 59, 76, 0.1);
+    border-radius: 12px;
+    gridline-color: rgba(42, 59, 76, 0.08);
+    color: #3a4a5c;
+    selection-background-color: rgba(74, 143, 235, 0.1);
+    selection-color: #3a4a5c;
+    font-size: 13px;
+}
+
+QTableWidget#tableOrdenLlegada::item {
+    padding: 8px;
+    border: none;
+}
+
+QTableWidget#tableOrdenLlegada::item:selected {
+    background-color: rgba(74, 143, 235, 0.1);
+    color: #3a4a5c;
+}
+
 QTableWidget#tableInicioTurnos::item {
     padding: 8px;
     border: none;
@@ -337,7 +364,7 @@ QHeaderView::section {
 
 /* Botones de acción con estilo moderno */
 QPushButton#btnVerFichaInicio,
-QPushButton#btnInicioTurnoInicio {
+QPushButton#btnAgregarListaEspera {
     background-color: #4a8feb;
     color: white;
     border: none;
@@ -349,17 +376,52 @@ QPushButton#btnInicioTurnoInicio {
 }
 
 QPushButton#btnVerFichaInicio:hover,
-QPushButton#btnInicioTurnoInicio:hover {
+QPushButton#btnAgregarListaEspera:hover {
     background-color: #6ba5f2;
 }
 
 QPushButton#btnVerFichaInicio:pressed,
-QPushButton#btnInicioTurnoInicio:pressed {
+QPushButton#btnAgregarListaEspera:pressed {
     background-color: #3a7bd5;
+}
+
+/* Botón de inicio de turno para orden de llegada */
+QPushButton#btnInicioTurnoOrdenLlegada {
+    background-color: #4a8feb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: 600;
+    font-size: 13px;
+    min-width: 120px;
+}
+
+QPushButton#btnInicioTurnoOrdenLlegada:hover {
+    background-color: #6ba5f2;
+}
+
+QPushButton#btnInicioTurnoOrdenLlegada:pressed {
+    background-color: #3a7bd5;
+}
+
+/* Botón "Agregar a lista de espera" con color diferente */
+QPushButton#btnAgregarListaEspera {
+    background-color: #6ed5b7;
+}
+
+QPushButton#btnAgregarListaEspera:hover {
+    background-color: #8ee1c9;
 }
 
 /* Layout de acciones con espaciado */
 QHBoxLayout#inicioActions {
+    spacing: 15px;
+    margin: 15px 0px;
+}
+
+/* Layout de acciones para orden de llegada */
+QHBoxLayout#ordenLlegadaActions {
     spacing: 15px;
     margin: 15px 0px;
 }
@@ -1554,4 +1616,30 @@ QDialog QPushButton#btnFinalizar {
 
 QDialog QPushButton#btnFinalizar:hover {
     background-color: #c0392b;
+}
+
+QTabWidget::pane {
+    border: 1px solid #cccccc;   /* borde gris claro */
+    background: #f8faff;         /* fondo claro */
+}
+
+QTabBar::tab {
+    background: #e6e6e6;   /* gris claro */
+    color: black;
+    padding: 6px 12px;
+    border: 1px solid #cccccc;
+    border-bottom: none;   /* para que se una con el pane */
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+QTabBar::tab:selected {
+    background: #ffffff;   /* pestaña activa blanca */
+    color: #007ACC;        /* texto azul */
+    border: 1px solid #cccccc;
+    border-bottom: none;
+}
+
+QTabBar::tab:hover {
+    background: #f2f2f2;   /* un gris más claro al pasar el mouse */
 }

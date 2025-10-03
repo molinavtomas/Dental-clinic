@@ -27,6 +27,7 @@
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QStackedWidget>
 #include <QtWidgets/QStatusBar>
+#include <QtWidgets/QTabWidget>
 #include <QtWidgets/QTableWidget>
 #include <QtWidgets/QTimeEdit>
 #include <QtWidgets/QVBoxLayout>
@@ -38,42 +39,57 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
-    QHBoxLayout *horizontalLayout;
-    QFrame *SidebarFrame;
-    QVBoxLayout *sidebarLayout;
-    QLabel *labelOpciones;
-    QPushButton *btnInicio;
-    QPushButton *btnPacientes;
-    QPushButton *btnFichas;
-    QPushButton *btnTurnos;
-    QPushButton *btnPagos;
+    QGridLayout *gridLayout;
+    QWidget *icon_only_widget;
+    QVBoxLayout *verticalLayout_3;
+    QVBoxLayout *verticalLayout;
+    QPushButton *logo_btn;
+    QHBoxLayout *logoLayout;
+    QPushButton *btnInicio_1;
+    QPushButton *btnPacientes_1;
+    QPushButton *btnFichas_1;
+    QPushButton *btnTurnos_1;
+    QPushButton *btnPagos_1;
     QSpacerItem *verticalSpacer;
-    QGroupBox *groupPacienteConsultorio;
+    QSpacerItem *verticalSpacer_4;
+    QPushButton *exit_btn_1;
+    QWidget *full_menu_widget;
+    QVBoxLayout *verticalLayout_4;
+    QVBoxLayout *verticalLayout_2;
+    QPushButton *logo_btn_2;
+    QHBoxLayout *logoLayout_2;
+    QLabel *logo_label_2;
+    QLabel *logo_label_3;
+    QPushButton *btnInicio_2;
+    QPushButton *btnPacientes_2;
+    QPushButton *btnFichas_2;
+    QPushButton *btnTurnos_2;
+    QPushButton *btnPagos_2;
+    QSpacerItem *verticalSpacer_2;
+    QSpacerItem *verticalSpacer_3;
+    QPushButton *exit_btn_2;
+    QWidget *widget_3;
+    QVBoxLayout *verticalLayout_5;
+    QStackedWidget *stackedWidget;
+    QWidget *pageInicio;
+    QVBoxLayout *inicioLayout;
+    QHBoxLayout *kpiLayout;
+    QGroupBox *groupPendientes;
+    QVBoxLayout *verticalLayout_31;
+    QLabel *labelPendientes;
+    QGroupBox *groupGananciasHoy;
+    QVBoxLayout *verticalLayout_41;
+    QLabel *labelGananciasHoy;
+    QGroupBox *groupPacienteEnConsultorio;
     QVBoxLayout *pacienteConsultorioLayout;
     QFrame *frameDatosPaciente;
     QVBoxLayout *datosPacienteLayout;
-    QLabel *labelDatosPacienteTitulo;
     QLabel *labelPacienteNombre;
     QLabel *labelPacienteApellido;
     QLabel *labelPacienteDni;
     QLabel *labelPacienteEdad;
     QLabel *labelPacienteObraSocial;
     QPushButton *btnFinalizarTurno;
-    QFrame *ContentFrame;
-    QVBoxLayout *contentLayout;
-    QStackedWidget *stackedWidget;
-    QWidget *pageInicio;
-    QVBoxLayout *inicioLayout;
-    QHBoxLayout *kpiLayout;
-    QGroupBox *groupPendientes;
-    QVBoxLayout *verticalLayout_3;
-    QLabel *labelPendientes;
-    QGroupBox *groupGananciasHoy;
-    QVBoxLayout *verticalLayout_4;
-    QLabel *labelGananciasHoy;
-    QGroupBox *groupGananciasMes;
-    QVBoxLayout *verticalLayout_5;
-    QLabel *labelGananciasMes;
     QHBoxLayout *inicioTopControls;
     QLabel *labelPacientesHoyInicio;
     QSpacerItem *spacerInicioTop;
@@ -85,8 +101,14 @@ public:
     QHBoxLayout *inicioActions;
     QSpacerItem *spacerInicioActionsLeft;
     QPushButton *btnVerFichaInicio;
-    QPushButton *btnInicioTurnoInicio;
+    QPushButton *btnAgregarListaEspera;
     QSpacerItem *spacerInicioActionsRight;
+    QLabel *labelOrdenLlegadaTitulo;
+    QTableWidget *tableOrdenLlegada;
+    QHBoxLayout *ordenLlegadaActions;
+    QSpacerItem *spacerOrdenLlegadaLeft;
+    QPushButton *btnInicioTurnoOrdenLlegada;
+    QSpacerItem *spacerOrdenLlegadaRight;
     QWidget *pagePacientes;
     QVBoxLayout *pacientesLayout;
     QHBoxLayout *pacientesSearchLayout;
@@ -120,6 +142,9 @@ public:
     QPushButton *btnAgregarPaciente;
     QWidget *pageFichas;
     QVBoxLayout *fichasLayout;
+    QTabWidget *tabWidgetFichas;
+    QWidget *tabFichas;
+    QVBoxLayout *tabFichasLayout;
     QHBoxLayout *fichasTopSearch;
     QSpacerItem *fichasLeftSpacer;
     QLabel *labelBuscarPacientePor;
@@ -149,6 +174,10 @@ public:
     QHBoxLayout *adjuntosButtons;
     QSpacerItem *adjSpacer;
     QPushButton *btnVerArchivo;
+    QWidget *tabOdontograma;
+    QVBoxLayout *tabOdontogramaLayout;
+    QLabel *labelOdontogramaTitulo;
+    QLabel *labelOdontogramaPlaceholder;
     QWidget *pageTurnos;
     QVBoxLayout *turnosLayout;
     QHBoxLayout *turnosTopControls;
@@ -200,20 +229,9 @@ public:
     QPushButton *btnCrearTurno;
     QWidget *pagePagos;
     QVBoxLayout *pagosLayout;
-    QHBoxLayout *historialTopControls;
-    QLabel *labelHistorialTitulo;
-    QSpacerItem *spacerHistorialLeft;
-    QLabel *labelOrdenarHistorial;
-    QComboBox *comboOrdenHistorial;
-    QSpacerItem *spacerHistorialMid;
-    QLabel *labelBuscarPorHistorial;
-    QComboBox *comboBuscarHistorial;
-    QLineEdit *editBuscarHistorial;
-    QPushButton *btnBuscarHistorial;
-    QTableWidget *tableHistorialPagos;
-    QHBoxLayout *historialActions;
-    QSpacerItem *spacerHistorialActions;
-    QPushButton *btnActualizarPago;
+    QTabWidget *tabWidgetPagos;
+    QWidget *tabPagosPendientes;
+    QVBoxLayout *tabPagosPendientesLayout;
     QHBoxLayout *pendientesTopControls;
     QLabel *labelPagosPendientes;
     QSpacerItem *spacerPendLeft;
@@ -280,6 +298,22 @@ public:
     QLabel *labelFormaDePago;
     QLineEdit *editFormaDePago;
     QPushButton *btnCobrar;
+    QWidget *tabHistorialPagos;
+    QVBoxLayout *tabHistorialPagosLayout;
+    QHBoxLayout *historialTopControls;
+    QLabel *labelHistorialTitulo;
+    QSpacerItem *spacerHistorialLeft;
+    QLabel *labelOrdenarHistorial;
+    QComboBox *comboOrdenHistorial;
+    QSpacerItem *spacerHistorialMid;
+    QLabel *labelBuscarPorHistorial;
+    QComboBox *comboBuscarHistorial;
+    QLineEdit *editBuscarHistorial;
+    QPushButton *btnBuscarHistorial;
+    QTableWidget *tableHistorialPagos;
+    QHBoxLayout *historialActions;
+    QSpacerItem *spacerHistorialActions;
+    QPushButton *btnActualizarPago;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -287,117 +321,187 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(1062, 690);
+        MainWindow->resize(1090, 690);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
-        horizontalLayout = new QHBoxLayout(centralwidget);
-        horizontalLayout->setObjectName("horizontalLayout");
-        SidebarFrame = new QFrame(centralwidget);
-        SidebarFrame->setObjectName("SidebarFrame");
-        SidebarFrame->setMinimumSize(QSize(180, 0));
-        SidebarFrame->setFrameShape(QFrame::Shape::StyledPanel);
-        SidebarFrame->setFrameShadow(QFrame::Shadow::Raised);
-        sidebarLayout = new QVBoxLayout(SidebarFrame);
-        sidebarLayout->setObjectName("sidebarLayout");
-        labelOpciones = new QLabel(SidebarFrame);
-        labelOpciones->setObjectName("labelOpciones");
+        gridLayout = new QGridLayout(centralwidget);
+        gridLayout->setSpacing(0);
+        gridLayout->setObjectName("gridLayout");
+        gridLayout->setContentsMargins(0, 0, 0, 0);
+        icon_only_widget = new QWidget(centralwidget);
+        icon_only_widget->setObjectName("icon_only_widget");
+        icon_only_widget->setMinimumSize(QSize(70, 0));
+        icon_only_widget->setMaximumSize(QSize(70, 16777215));
+        verticalLayout_3 = new QVBoxLayout(icon_only_widget);
+        verticalLayout_3->setSpacing(6);
+        verticalLayout_3->setObjectName("verticalLayout_3");
+        verticalLayout_3->setContentsMargins(9, 9, 9, 9);
+        verticalLayout = new QVBoxLayout();
+        verticalLayout->setSpacing(5);
+        verticalLayout->setObjectName("verticalLayout");
+        verticalLayout->setContentsMargins(5, 5, 5, 5);
+        logo_btn = new QPushButton(icon_only_widget);
+        logo_btn->setObjectName("logo_btn");
+        logo_btn->setCheckable(true);
+        logoLayout = new QHBoxLayout(logo_btn);
+        logoLayout->setSpacing(0);
+        logoLayout->setObjectName("logoLayout");
 
-        sidebarLayout->addWidget(labelOpciones);
+        verticalLayout->addWidget(logo_btn);
 
-        btnInicio = new QPushButton(SidebarFrame);
-        btnInicio->setObjectName("btnInicio");
-        btnInicio->setStyleSheet(QString::fromUtf8(""));
+        btnInicio_1 = new QPushButton(icon_only_widget);
+        btnInicio_1->setObjectName("btnInicio_1");
+        btnInicio_1->setCheckable(true);
+        btnInicio_1->setAutoExclusive(true);
 
-        sidebarLayout->addWidget(btnInicio);
+        verticalLayout->addWidget(btnInicio_1);
 
-        btnPacientes = new QPushButton(SidebarFrame);
-        btnPacientes->setObjectName("btnPacientes");
+        btnPacientes_1 = new QPushButton(icon_only_widget);
+        btnPacientes_1->setObjectName("btnPacientes_1");
+        btnPacientes_1->setCheckable(true);
+        btnPacientes_1->setAutoExclusive(true);
 
-        sidebarLayout->addWidget(btnPacientes);
+        verticalLayout->addWidget(btnPacientes_1);
 
-        btnFichas = new QPushButton(SidebarFrame);
-        btnFichas->setObjectName("btnFichas");
+        btnFichas_1 = new QPushButton(icon_only_widget);
+        btnFichas_1->setObjectName("btnFichas_1");
+        btnFichas_1->setCheckable(true);
+        btnFichas_1->setAutoExclusive(true);
 
-        sidebarLayout->addWidget(btnFichas);
+        verticalLayout->addWidget(btnFichas_1);
 
-        btnTurnos = new QPushButton(SidebarFrame);
-        btnTurnos->setObjectName("btnTurnos");
+        btnTurnos_1 = new QPushButton(icon_only_widget);
+        btnTurnos_1->setObjectName("btnTurnos_1");
+        btnTurnos_1->setCheckable(true);
+        btnTurnos_1->setAutoExclusive(true);
 
-        sidebarLayout->addWidget(btnTurnos);
+        verticalLayout->addWidget(btnTurnos_1);
 
-        btnPagos = new QPushButton(SidebarFrame);
-        btnPagos->setObjectName("btnPagos");
+        btnPagos_1 = new QPushButton(icon_only_widget);
+        btnPagos_1->setObjectName("btnPagos_1");
+        btnPagos_1->setCheckable(true);
+        btnPagos_1->setAutoExclusive(true);
 
-        sidebarLayout->addWidget(btnPagos);
+        verticalLayout->addWidget(btnPagos_1);
 
         verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
 
-        sidebarLayout->addItem(verticalSpacer);
+        verticalLayout->addItem(verticalSpacer);
 
-        groupPacienteConsultorio = new QGroupBox(SidebarFrame);
-        groupPacienteConsultorio->setObjectName("groupPacienteConsultorio");
-        pacienteConsultorioLayout = new QVBoxLayout(groupPacienteConsultorio);
-        pacienteConsultorioLayout->setObjectName("pacienteConsultorioLayout");
-        frameDatosPaciente = new QFrame(groupPacienteConsultorio);
-        frameDatosPaciente->setObjectName("frameDatosPaciente");
-        frameDatosPaciente->setFrameShape(QFrame::Shape::StyledPanel);
-        frameDatosPaciente->setFrameShadow(QFrame::Shadow::Raised);
-        datosPacienteLayout = new QVBoxLayout(frameDatosPaciente);
-        datosPacienteLayout->setObjectName("datosPacienteLayout");
-        labelDatosPacienteTitulo = new QLabel(frameDatosPaciente);
-        labelDatosPacienteTitulo->setObjectName("labelDatosPacienteTitulo");
+        verticalSpacer_4 = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
+
+        verticalLayout->addItem(verticalSpacer_4);
+
+
+        verticalLayout_3->addLayout(verticalLayout);
+
+        exit_btn_1 = new QPushButton(icon_only_widget);
+        exit_btn_1->setObjectName("exit_btn_1");
+
+        verticalLayout_3->addWidget(exit_btn_1);
+
+
+        gridLayout->addWidget(icon_only_widget, 0, 0, 1, 1);
+
+        full_menu_widget = new QWidget(centralwidget);
+        full_menu_widget->setObjectName("full_menu_widget");
+        full_menu_widget->setMinimumSize(QSize(200, 0));
+        full_menu_widget->setMaximumSize(QSize(200, 16777215));
+        verticalLayout_4 = new QVBoxLayout(full_menu_widget);
+        verticalLayout_4->setObjectName("verticalLayout_4");
+        verticalLayout_2 = new QVBoxLayout();
+        verticalLayout_2->setSpacing(5);
+        verticalLayout_2->setObjectName("verticalLayout_2");
+        verticalLayout_2->setContentsMargins(5, 5, 5, 5);
+        logo_btn_2 = new QPushButton(full_menu_widget);
+        logo_btn_2->setObjectName("logo_btn_2");
+        logo_btn_2->setCheckable(true);
+        logoLayout_2 = new QHBoxLayout(logo_btn_2);
+        logoLayout_2->setSpacing(0);
+        logoLayout_2->setObjectName("logoLayout_2");
+        logo_label_2 = new QLabel(logo_btn_2);
+        logo_label_2->setObjectName("logo_label_2");
+        logo_label_2->setMinimumSize(QSize(40, 40));
+        logo_label_2->setMaximumSize(QSize(40, 40));
         QFont font;
-        font.setBold(true);
-        labelDatosPacienteTitulo->setFont(font);
+        font.setPointSize(20);
+        logo_label_2->setFont(font);
+        logo_label_2->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
-        datosPacienteLayout->addWidget(labelDatosPacienteTitulo);
+        logoLayout_2->addWidget(logo_label_2);
 
-        labelPacienteNombre = new QLabel(frameDatosPaciente);
-        labelPacienteNombre->setObjectName("labelPacienteNombre");
+        logo_label_3 = new QLabel(logo_btn_2);
+        logo_label_3->setObjectName("logo_label_3");
+        QFont font1;
+        font1.setPointSize(15);
+        logo_label_3->setFont(font1);
 
-        datosPacienteLayout->addWidget(labelPacienteNombre);
-
-        labelPacienteApellido = new QLabel(frameDatosPaciente);
-        labelPacienteApellido->setObjectName("labelPacienteApellido");
-
-        datosPacienteLayout->addWidget(labelPacienteApellido);
-
-        labelPacienteDni = new QLabel(frameDatosPaciente);
-        labelPacienteDni->setObjectName("labelPacienteDni");
-
-        datosPacienteLayout->addWidget(labelPacienteDni);
-
-        labelPacienteEdad = new QLabel(frameDatosPaciente);
-        labelPacienteEdad->setObjectName("labelPacienteEdad");
-
-        datosPacienteLayout->addWidget(labelPacienteEdad);
-
-        labelPacienteObraSocial = new QLabel(frameDatosPaciente);
-        labelPacienteObraSocial->setObjectName("labelPacienteObraSocial");
-
-        datosPacienteLayout->addWidget(labelPacienteObraSocial);
+        logoLayout_2->addWidget(logo_label_3);
 
 
-        pacienteConsultorioLayout->addWidget(frameDatosPaciente);
+        verticalLayout_2->addWidget(logo_btn_2);
 
-        btnFinalizarTurno = new QPushButton(groupPacienteConsultorio);
-        btnFinalizarTurno->setObjectName("btnFinalizarTurno");
+        btnInicio_2 = new QPushButton(full_menu_widget);
+        btnInicio_2->setObjectName("btnInicio_2");
+        btnInicio_2->setCheckable(true);
+        btnInicio_2->setAutoExclusive(true);
 
-        pacienteConsultorioLayout->addWidget(btnFinalizarTurno);
+        verticalLayout_2->addWidget(btnInicio_2);
+
+        btnPacientes_2 = new QPushButton(full_menu_widget);
+        btnPacientes_2->setObjectName("btnPacientes_2");
+        btnPacientes_2->setCheckable(true);
+        btnPacientes_2->setAutoExclusive(true);
+
+        verticalLayout_2->addWidget(btnPacientes_2);
+
+        btnFichas_2 = new QPushButton(full_menu_widget);
+        btnFichas_2->setObjectName("btnFichas_2");
+        btnFichas_2->setCheckable(true);
+        btnFichas_2->setAutoExclusive(true);
+
+        verticalLayout_2->addWidget(btnFichas_2);
+
+        btnTurnos_2 = new QPushButton(full_menu_widget);
+        btnTurnos_2->setObjectName("btnTurnos_2");
+        btnTurnos_2->setCheckable(true);
+        btnTurnos_2->setAutoExclusive(true);
+
+        verticalLayout_2->addWidget(btnTurnos_2);
+
+        btnPagos_2 = new QPushButton(full_menu_widget);
+        btnPagos_2->setObjectName("btnPagos_2");
+        btnPagos_2->setCheckable(true);
+        btnPagos_2->setAutoExclusive(true);
+
+        verticalLayout_2->addWidget(btnPagos_2);
 
 
-        sidebarLayout->addWidget(groupPacienteConsultorio);
+        verticalLayout_4->addLayout(verticalLayout_2);
+
+        verticalSpacer_2 = new QSpacerItem(20, 200, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
+
+        verticalLayout_4->addItem(verticalSpacer_2);
+
+        verticalSpacer_3 = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
+
+        verticalLayout_4->addItem(verticalSpacer_3);
+
+        exit_btn_2 = new QPushButton(full_menu_widget);
+        exit_btn_2->setObjectName("exit_btn_2");
+
+        verticalLayout_4->addWidget(exit_btn_2);
 
 
-        horizontalLayout->addWidget(SidebarFrame);
+        gridLayout->addWidget(full_menu_widget, 0, 1, 1, 1);
 
-        ContentFrame = new QFrame(centralwidget);
-        ContentFrame->setObjectName("ContentFrame");
-        ContentFrame->setStyleSheet(QString::fromUtf8(""));
-        ContentFrame->setFrameShape(QFrame::Shape::NoFrame);
-        contentLayout = new QVBoxLayout(ContentFrame);
-        contentLayout->setObjectName("contentLayout");
-        stackedWidget = new QStackedWidget(ContentFrame);
+        widget_3 = new QWidget(centralwidget);
+        widget_3->setObjectName("widget_3");
+        verticalLayout_5 = new QVBoxLayout(widget_3);
+        verticalLayout_5->setSpacing(0);
+        verticalLayout_5->setObjectName("verticalLayout_5");
+        verticalLayout_5->setContentsMargins(0, 0, 0, 0);
+        stackedWidget = new QStackedWidget(widget_3);
         stackedWidget->setObjectName("stackedWidget");
         pageInicio = new QWidget();
         pageInicio->setObjectName("pageInicio");
@@ -407,45 +511,92 @@ public:
         kpiLayout->setObjectName("kpiLayout");
         groupPendientes = new QGroupBox(pageInicio);
         groupPendientes->setObjectName("groupPendientes");
-        verticalLayout_3 = new QVBoxLayout(groupPendientes);
-        verticalLayout_3->setObjectName("verticalLayout_3");
+        verticalLayout_31 = new QVBoxLayout(groupPendientes);
+        verticalLayout_31->setObjectName("verticalLayout_31");
         labelPendientes = new QLabel(groupPendientes);
         labelPendientes->setObjectName("labelPendientes");
         labelPendientes->setMinimumSize(QSize(100, 40));
         labelPendientes->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
-        verticalLayout_3->addWidget(labelPendientes);
+        verticalLayout_31->addWidget(labelPendientes);
 
 
         kpiLayout->addWidget(groupPendientes);
 
         groupGananciasHoy = new QGroupBox(pageInicio);
         groupGananciasHoy->setObjectName("groupGananciasHoy");
-        verticalLayout_4 = new QVBoxLayout(groupGananciasHoy);
-        verticalLayout_4->setObjectName("verticalLayout_4");
+        verticalLayout_41 = new QVBoxLayout(groupGananciasHoy);
+        verticalLayout_41->setObjectName("verticalLayout_41");
         labelGananciasHoy = new QLabel(groupGananciasHoy);
         labelGananciasHoy->setObjectName("labelGananciasHoy");
         labelGananciasHoy->setMinimumSize(QSize(100, 40));
         labelGananciasHoy->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
-        verticalLayout_4->addWidget(labelGananciasHoy);
+        verticalLayout_41->addWidget(labelGananciasHoy);
 
 
         kpiLayout->addWidget(groupGananciasHoy);
 
-        groupGananciasMes = new QGroupBox(pageInicio);
-        groupGananciasMes->setObjectName("groupGananciasMes");
-        verticalLayout_5 = new QVBoxLayout(groupGananciasMes);
-        verticalLayout_5->setObjectName("verticalLayout_5");
-        labelGananciasMes = new QLabel(groupGananciasMes);
-        labelGananciasMes->setObjectName("labelGananciasMes");
-        labelGananciasMes->setMinimumSize(QSize(100, 40));
-        labelGananciasMes->setAlignment(Qt::AlignmentFlag::AlignCenter);
+        groupPacienteEnConsultorio = new QGroupBox(pageInicio);
+        groupPacienteEnConsultorio->setObjectName("groupPacienteEnConsultorio");
+        groupPacienteEnConsultorio->setMaximumSize(QSize(16777215, 200));
+        pacienteConsultorioLayout = new QVBoxLayout(groupPacienteEnConsultorio);
+        pacienteConsultorioLayout->setSpacing(1);
+        pacienteConsultorioLayout->setObjectName("pacienteConsultorioLayout");
+        pacienteConsultorioLayout->setContentsMargins(1, 1, 1, 1);
+        frameDatosPaciente = new QFrame(groupPacienteEnConsultorio);
+        frameDatosPaciente->setObjectName("frameDatosPaciente");
+        frameDatosPaciente->setMaximumSize(QSize(16777215, 120));
+        frameDatosPaciente->setFrameShape(QFrame::Shape::StyledPanel);
+        frameDatosPaciente->setFrameShadow(QFrame::Shadow::Raised);
+        datosPacienteLayout = new QVBoxLayout(frameDatosPaciente);
+        datosPacienteLayout->setSpacing(2);
+        datosPacienteLayout->setObjectName("datosPacienteLayout");
+        datosPacienteLayout->setContentsMargins(5, 5, 5, 5);
+        labelPacienteNombre = new QLabel(frameDatosPaciente);
+        labelPacienteNombre->setObjectName("labelPacienteNombre");
+        QFont font2;
+        font2.setPointSize(9);
+        labelPacienteNombre->setFont(font2);
 
-        verticalLayout_5->addWidget(labelGananciasMes);
+        datosPacienteLayout->addWidget(labelPacienteNombre);
+
+        labelPacienteApellido = new QLabel(frameDatosPaciente);
+        labelPacienteApellido->setObjectName("labelPacienteApellido");
+        labelPacienteApellido->setFont(font2);
+
+        datosPacienteLayout->addWidget(labelPacienteApellido);
+
+        labelPacienteDni = new QLabel(frameDatosPaciente);
+        labelPacienteDni->setObjectName("labelPacienteDni");
+        labelPacienteDni->setFont(font2);
+
+        datosPacienteLayout->addWidget(labelPacienteDni);
+
+        labelPacienteEdad = new QLabel(frameDatosPaciente);
+        labelPacienteEdad->setObjectName("labelPacienteEdad");
+        labelPacienteEdad->setFont(font2);
+
+        datosPacienteLayout->addWidget(labelPacienteEdad);
+
+        labelPacienteObraSocial = new QLabel(frameDatosPaciente);
+        labelPacienteObraSocial->setObjectName("labelPacienteObraSocial");
+        labelPacienteObraSocial->setFont(font2);
+
+        datosPacienteLayout->addWidget(labelPacienteObraSocial);
 
 
-        kpiLayout->addWidget(groupGananciasMes);
+        pacienteConsultorioLayout->addWidget(frameDatosPaciente);
+
+        btnFinalizarTurno = new QPushButton(groupPacienteEnConsultorio);
+        btnFinalizarTurno->setObjectName("btnFinalizarTurno");
+        btnFinalizarTurno->setMaximumSize(QSize(16777215, 40));
+        btnFinalizarTurno->setFont(font2);
+
+        pacienteConsultorioLayout->addWidget(btnFinalizarTurno);
+
+
+        kpiLayout->addWidget(groupPacienteEnConsultorio);
 
 
         inicioLayout->addLayout(kpiLayout);
@@ -503,10 +654,10 @@ public:
 
         inicioActions->addWidget(btnVerFichaInicio);
 
-        btnInicioTurnoInicio = new QPushButton(pageInicio);
-        btnInicioTurnoInicio->setObjectName("btnInicioTurnoInicio");
+        btnAgregarListaEspera = new QPushButton(pageInicio);
+        btnAgregarListaEspera->setObjectName("btnAgregarListaEspera");
 
-        inicioActions->addWidget(btnInicioTurnoInicio);
+        inicioActions->addWidget(btnAgregarListaEspera);
 
         spacerInicioActionsRight = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
 
@@ -514,6 +665,38 @@ public:
 
 
         inicioLayout->addLayout(inicioActions);
+
+        labelOrdenLlegadaTitulo = new QLabel(pageInicio);
+        labelOrdenLlegadaTitulo->setObjectName("labelOrdenLlegadaTitulo");
+        QFont font3;
+        font3.setPointSize(14);
+        font3.setBold(true);
+        labelOrdenLlegadaTitulo->setFont(font3);
+
+        inicioLayout->addWidget(labelOrdenLlegadaTitulo);
+
+        tableOrdenLlegada = new QTableWidget(pageInicio);
+        tableOrdenLlegada->setObjectName("tableOrdenLlegada");
+
+        inicioLayout->addWidget(tableOrdenLlegada);
+
+        ordenLlegadaActions = new QHBoxLayout();
+        ordenLlegadaActions->setObjectName("ordenLlegadaActions");
+        spacerOrdenLlegadaLeft = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        ordenLlegadaActions->addItem(spacerOrdenLlegadaLeft);
+
+        btnInicioTurnoOrdenLlegada = new QPushButton(pageInicio);
+        btnInicioTurnoOrdenLlegada->setObjectName("btnInicioTurnoOrdenLlegada");
+
+        ordenLlegadaActions->addWidget(btnInicioTurnoOrdenLlegada);
+
+        spacerOrdenLlegadaRight = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        ordenLlegadaActions->addItem(spacerOrdenLlegadaRight);
+
+
+        inicioLayout->addLayout(ordenLlegadaActions);
 
         stackedWidget->addWidget(pageInicio);
         pagePacientes = new QWidget();
@@ -667,135 +850,143 @@ public:
         pageFichas->setObjectName("pageFichas");
         fichasLayout = new QVBoxLayout(pageFichas);
         fichasLayout->setObjectName("fichasLayout");
+        tabWidgetFichas = new QTabWidget(pageFichas);
+        tabWidgetFichas->setObjectName("tabWidgetFichas");
+        tabWidgetFichas->setStyleSheet(QString::fromUtf8(""));
+        tabWidgetFichas->setInputMethodHints(Qt::InputMethodHint::ImhNone);
+        tabFichas = new QWidget();
+        tabFichas->setObjectName("tabFichas");
+        tabFichasLayout = new QVBoxLayout(tabFichas);
+        tabFichasLayout->setObjectName("tabFichasLayout");
         fichasTopSearch = new QHBoxLayout();
         fichasTopSearch->setObjectName("fichasTopSearch");
         fichasLeftSpacer = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
 
         fichasTopSearch->addItem(fichasLeftSpacer);
 
-        labelBuscarPacientePor = new QLabel(pageFichas);
+        labelBuscarPacientePor = new QLabel(tabFichas);
         labelBuscarPacientePor->setObjectName("labelBuscarPacientePor");
 
         fichasTopSearch->addWidget(labelBuscarPacientePor);
 
-        comboBuscarFichas = new QComboBox(pageFichas);
+        comboBuscarFichas = new QComboBox(tabFichas);
         comboBuscarFichas->addItem(QString());
         comboBuscarFichas->setObjectName("comboBuscarFichas");
 
         fichasTopSearch->addWidget(comboBuscarFichas);
 
-        editBuscarFichas = new QLineEdit(pageFichas);
+        editBuscarFichas = new QLineEdit(tabFichas);
         editBuscarFichas->setObjectName("editBuscarFichas");
 
         fichasTopSearch->addWidget(editBuscarFichas);
 
-        btnBuscarFichas = new QPushButton(pageFichas);
+        btnBuscarFichas = new QPushButton(tabFichas);
         btnBuscarFichas->setObjectName("btnBuscarFichas");
 
         fichasTopSearch->addWidget(btnBuscarFichas);
 
 
-        fichasLayout->addLayout(fichasTopSearch);
+        tabFichasLayout->addLayout(fichasTopSearch);
 
         fichasDatosPaciente = new QGridLayout();
         fichasDatosPaciente->setObjectName("fichasDatosPaciente");
-        lblDatosPacienteTitulo = new QLabel(pageFichas);
+        lblDatosPacienteTitulo = new QLabel(tabFichas);
         lblDatosPacienteTitulo->setObjectName("lblDatosPacienteTitulo");
 
         fichasDatosPaciente->addWidget(lblDatosPacienteTitulo, 0, 0, 1, 1);
 
-        lblNombre = new QLabel(pageFichas);
+        lblNombre = new QLabel(tabFichas);
         lblNombre->setObjectName("lblNombre");
 
         fichasDatosPaciente->addWidget(lblNombre, 1, 0, 1, 1);
 
-        lblDomicilio = new QLabel(pageFichas);
+        lblDomicilio = new QLabel(tabFichas);
         lblDomicilio->setObjectName("lblDomicilio");
 
         fichasDatosPaciente->addWidget(lblDomicilio, 1, 1, 1, 1);
 
-        lblApellido = new QLabel(pageFichas);
+        lblApellido = new QLabel(tabFichas);
         lblApellido->setObjectName("lblApellido");
 
         fichasDatosPaciente->addWidget(lblApellido, 2, 0, 1, 1);
 
-        lblOcupacion = new QLabel(pageFichas);
+        lblOcupacion = new QLabel(tabFichas);
         lblOcupacion->setObjectName("lblOcupacion");
 
         fichasDatosPaciente->addWidget(lblOcupacion, 2, 1, 1, 1);
 
-        lblDni = new QLabel(pageFichas);
+        lblDni = new QLabel(tabFichas);
         lblDni->setObjectName("lblDni");
 
         fichasDatosPaciente->addWidget(lblDni, 3, 0, 1, 1);
 
-        lblEdad = new QLabel(pageFichas);
+        lblEdad = new QLabel(tabFichas);
         lblEdad->setObjectName("lblEdad");
 
         fichasDatosPaciente->addWidget(lblEdad, 3, 1, 1, 1);
 
-        lblTelefono = new QLabel(pageFichas);
+        lblTelefono = new QLabel(tabFichas);
         lblTelefono->setObjectName("lblTelefono");
 
         fichasDatosPaciente->addWidget(lblTelefono, 4, 0, 1, 1);
 
-        lblNacimiento = new QLabel(pageFichas);
+        lblNacimiento = new QLabel(tabFichas);
         lblNacimiento->setObjectName("lblNacimiento");
 
         fichasDatosPaciente->addWidget(lblNacimiento, 4, 1, 1, 1);
 
-        lblObraSocial = new QLabel(pageFichas);
+        lblObraSocial = new QLabel(tabFichas);
         lblObraSocial->setObjectName("lblObraSocial");
 
         fichasDatosPaciente->addWidget(lblObraSocial, 5, 0, 1, 1);
 
 
-        fichasLayout->addLayout(fichasDatosPaciente);
+        tabFichasLayout->addLayout(fichasDatosPaciente);
 
-        labelFichaMedicaTitulo = new QLabel(pageFichas);
+        labelFichaMedicaTitulo = new QLabel(tabFichas);
         labelFichaMedicaTitulo->setObjectName("labelFichaMedicaTitulo");
 
-        fichasLayout->addWidget(labelFichaMedicaTitulo);
+        tabFichasLayout->addWidget(labelFichaMedicaTitulo);
 
-        tableFichaMedica = new QTableWidget(pageFichas);
+        tableFichaMedica = new QTableWidget(tabFichas);
         tableFichaMedica->setObjectName("tableFichaMedica");
 
-        fichasLayout->addWidget(tableFichaMedica);
+        tabFichasLayout->addWidget(tableFichaMedica);
 
         fichasButtons = new QHBoxLayout();
         fichasButtons->setObjectName("fichasButtons");
-        btnAgregarPrestacion = new QPushButton(pageFichas);
+        btnAgregarPrestacion = new QPushButton(tabFichas);
         btnAgregarPrestacion->setObjectName("btnAgregarPrestacion");
 
         fichasButtons->addWidget(btnAgregarPrestacion);
 
-        btnEditarFicha = new QPushButton(pageFichas);
+        btnEditarFicha = new QPushButton(tabFichas);
         btnEditarFicha->setObjectName("btnEditarFicha");
 
         fichasButtons->addWidget(btnEditarFicha);
 
-        btnVerTicket = new QPushButton(pageFichas);
+        btnVerTicket = new QPushButton(tabFichas);
         btnVerTicket->setObjectName("btnVerTicket");
 
         fichasButtons->addWidget(btnVerTicket);
 
-        btnVerHistorialPagos = new QPushButton(pageFichas);
+        btnVerHistorialPagos = new QPushButton(tabFichas);
         btnVerHistorialPagos->setObjectName("btnVerHistorialPagos");
 
         fichasButtons->addWidget(btnVerHistorialPagos);
 
 
-        fichasLayout->addLayout(fichasButtons);
+        tabFichasLayout->addLayout(fichasButtons);
 
-        labelAdjuntosTitulo = new QLabel(pageFichas);
+        labelAdjuntosTitulo = new QLabel(tabFichas);
         labelAdjuntosTitulo->setObjectName("labelAdjuntosTitulo");
 
-        fichasLayout->addWidget(labelAdjuntosTitulo);
+        tabFichasLayout->addWidget(labelAdjuntosTitulo);
 
-        tableAdjuntos = new QTableWidget(pageFichas);
+        tableAdjuntos = new QTableWidget(tabFichas);
         tableAdjuntos->setObjectName("tableAdjuntos");
 
-        fichasLayout->addWidget(tableAdjuntos);
+        tabFichasLayout->addWidget(tableAdjuntos);
 
         adjuntosButtons = new QHBoxLayout();
         adjuntosButtons->setObjectName("adjuntosButtons");
@@ -803,13 +994,42 @@ public:
 
         adjuntosButtons->addItem(adjSpacer);
 
-        btnVerArchivo = new QPushButton(pageFichas);
+        btnVerArchivo = new QPushButton(tabFichas);
         btnVerArchivo->setObjectName("btnVerArchivo");
 
         adjuntosButtons->addWidget(btnVerArchivo);
 
 
-        fichasLayout->addLayout(adjuntosButtons);
+        tabFichasLayout->addLayout(adjuntosButtons);
+
+        tabWidgetFichas->addTab(tabFichas, QString());
+        tabOdontograma = new QWidget();
+        tabOdontograma->setObjectName("tabOdontograma");
+        tabOdontogramaLayout = new QVBoxLayout(tabOdontograma);
+        tabOdontogramaLayout->setObjectName("tabOdontogramaLayout");
+        labelOdontogramaTitulo = new QLabel(tabOdontograma);
+        labelOdontogramaTitulo->setObjectName("labelOdontogramaTitulo");
+        labelOdontogramaTitulo->setFont(font3);
+        labelOdontogramaTitulo->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        tabOdontogramaLayout->addWidget(labelOdontogramaTitulo);
+
+        labelOdontogramaPlaceholder = new QLabel(tabOdontograma);
+        labelOdontogramaPlaceholder->setObjectName("labelOdontogramaPlaceholder");
+        labelOdontogramaPlaceholder->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"    background-color: #f0f0f0;\n"
+"    border: 2px dashed #ccc;\n"
+"    padding: 20px;\n"
+"    font-size: 16px;\n"
+"    color: #666;\n"
+"}"));
+        labelOdontogramaPlaceholder->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        tabOdontogramaLayout->addWidget(labelOdontogramaPlaceholder);
+
+        tabWidgetFichas->addTab(tabOdontograma, QString());
+
+        fichasLayout->addWidget(tabWidgetFichas);
 
         stackedWidget->addWidget(pageFichas);
         pageTurnos = new QWidget();
@@ -1048,78 +1268,15 @@ public:
         pagePagos->setObjectName("pagePagos");
         pagosLayout = new QVBoxLayout(pagePagos);
         pagosLayout->setObjectName("pagosLayout");
-        historialTopControls = new QHBoxLayout();
-        historialTopControls->setObjectName("historialTopControls");
-        labelHistorialTitulo = new QLabel(pagePagos);
-        labelHistorialTitulo->setObjectName("labelHistorialTitulo");
-
-        historialTopControls->addWidget(labelHistorialTitulo);
-
-        spacerHistorialLeft = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
-
-        historialTopControls->addItem(spacerHistorialLeft);
-
-        labelOrdenarHistorial = new QLabel(pagePagos);
-        labelOrdenarHistorial->setObjectName("labelOrdenarHistorial");
-
-        historialTopControls->addWidget(labelOrdenarHistorial);
-
-        comboOrdenHistorial = new QComboBox(pagePagos);
-        comboOrdenHistorial->addItem(QString());
-        comboOrdenHistorial->setObjectName("comboOrdenHistorial");
-
-        historialTopControls->addWidget(comboOrdenHistorial);
-
-        spacerHistorialMid = new QSpacerItem(20, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
-
-        historialTopControls->addItem(spacerHistorialMid);
-
-        labelBuscarPorHistorial = new QLabel(pagePagos);
-        labelBuscarPorHistorial->setObjectName("labelBuscarPorHistorial");
-
-        historialTopControls->addWidget(labelBuscarPorHistorial);
-
-        comboBuscarHistorial = new QComboBox(pagePagos);
-        comboBuscarHistorial->addItem(QString());
-        comboBuscarHistorial->setObjectName("comboBuscarHistorial");
-
-        historialTopControls->addWidget(comboBuscarHistorial);
-
-        editBuscarHistorial = new QLineEdit(pagePagos);
-        editBuscarHistorial->setObjectName("editBuscarHistorial");
-
-        historialTopControls->addWidget(editBuscarHistorial);
-
-        btnBuscarHistorial = new QPushButton(pagePagos);
-        btnBuscarHistorial->setObjectName("btnBuscarHistorial");
-
-        historialTopControls->addWidget(btnBuscarHistorial);
-
-
-        pagosLayout->addLayout(historialTopControls);
-
-        tableHistorialPagos = new QTableWidget(pagePagos);
-        tableHistorialPagos->setObjectName("tableHistorialPagos");
-
-        pagosLayout->addWidget(tableHistorialPagos);
-
-        historialActions = new QHBoxLayout();
-        historialActions->setObjectName("historialActions");
-        spacerHistorialActions = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
-
-        historialActions->addItem(spacerHistorialActions);
-
-        btnActualizarPago = new QPushButton(pagePagos);
-        btnActualizarPago->setObjectName("btnActualizarPago");
-
-        historialActions->addWidget(btnActualizarPago);
-
-
-        pagosLayout->addLayout(historialActions);
-
+        tabWidgetPagos = new QTabWidget(pagePagos);
+        tabWidgetPagos->setObjectName("tabWidgetPagos");
+        tabPagosPendientes = new QWidget();
+        tabPagosPendientes->setObjectName("tabPagosPendientes");
+        tabPagosPendientesLayout = new QVBoxLayout(tabPagosPendientes);
+        tabPagosPendientesLayout->setObjectName("tabPagosPendientesLayout");
         pendientesTopControls = new QHBoxLayout();
         pendientesTopControls->setObjectName("pendientesTopControls");
-        labelPagosPendientes = new QLabel(pagePagos);
+        labelPagosPendientes = new QLabel(tabPagosPendientes);
         labelPagosPendientes->setObjectName("labelPagosPendientes");
 
         pendientesTopControls->addWidget(labelPagosPendientes);
@@ -1128,12 +1285,12 @@ public:
 
         pendientesTopControls->addItem(spacerPendLeft);
 
-        labelOrdenarPend = new QLabel(pagePagos);
+        labelOrdenarPend = new QLabel(tabPagosPendientes);
         labelOrdenarPend->setObjectName("labelOrdenarPend");
 
         pendientesTopControls->addWidget(labelOrdenarPend);
 
-        comboOrdenPend = new QComboBox(pagePagos);
+        comboOrdenPend = new QComboBox(tabPagosPendientes);
         comboOrdenPend->addItem(QString());
         comboOrdenPend->setObjectName("comboOrdenPend");
 
@@ -1143,34 +1300,34 @@ public:
 
         pendientesTopControls->addItem(spacerPendMid);
 
-        labelBuscarPorPend = new QLabel(pagePagos);
+        labelBuscarPorPend = new QLabel(tabPagosPendientes);
         labelBuscarPorPend->setObjectName("labelBuscarPorPend");
 
         pendientesTopControls->addWidget(labelBuscarPorPend);
 
-        comboBuscarPend = new QComboBox(pagePagos);
+        comboBuscarPend = new QComboBox(tabPagosPendientes);
         comboBuscarPend->addItem(QString());
         comboBuscarPend->setObjectName("comboBuscarPend");
 
         pendientesTopControls->addWidget(comboBuscarPend);
 
-        editBuscarPend = new QLineEdit(pagePagos);
+        editBuscarPend = new QLineEdit(tabPagosPendientes);
         editBuscarPend->setObjectName("editBuscarPend");
 
         pendientesTopControls->addWidget(editBuscarPend);
 
-        btnBuscarPend = new QPushButton(pagePagos);
+        btnBuscarPend = new QPushButton(tabPagosPendientes);
         btnBuscarPend->setObjectName("btnBuscarPend");
 
         pendientesTopControls->addWidget(btnBuscarPend);
 
 
-        pagosLayout->addLayout(pendientesTopControls);
+        tabPagosPendientesLayout->addLayout(pendientesTopControls);
 
-        tablePagosPendientes = new QTableWidget(pagePagos);
+        tablePagosPendientes = new QTableWidget(tabPagosPendientes);
         tablePagosPendientes->setObjectName("tablePagosPendientes");
 
-        pagosLayout->addWidget(tablePagosPendientes);
+        tabPagosPendientesLayout->addWidget(tablePagosPendientes);
 
         pendientesActions = new QHBoxLayout();
         pendientesActions->setObjectName("pendientesActions");
@@ -1178,12 +1335,12 @@ public:
 
         pendientesActions->addItem(spacerPendActionsLeft);
 
-        btnCobrarAhora = new QPushButton(pagePagos);
+        btnCobrarAhora = new QPushButton(tabPagosPendientes);
         btnCobrarAhora->setObjectName("btnCobrarAhora");
 
         pendientesActions->addWidget(btnCobrarAhora);
 
-        btnRegistrarPagoParcial = new QPushButton(pagePagos);
+        btnRegistrarPagoParcial = new QPushButton(tabPagosPendientes);
         btnRegistrarPagoParcial->setObjectName("btnRegistrarPagoParcial");
 
         pendientesActions->addWidget(btnRegistrarPagoParcial);
@@ -1193,11 +1350,11 @@ public:
         pendientesActions->addItem(spacerPendActionsRight);
 
 
-        pagosLayout->addLayout(pendientesActions);
+        tabPagosPendientesLayout->addLayout(pendientesActions);
 
         pagosBottomLayout = new QHBoxLayout();
         pagosBottomLayout->setObjectName("pagosBottomLayout");
-        groupGenerarPago = new QGroupBox(pagePagos);
+        groupGenerarPago = new QGroupBox(tabPagosPendientes);
         groupGenerarPago->setObjectName("groupGenerarPago");
         gridGenerarPago = new QHBoxLayout(groupGenerarPago);
         gridGenerarPago->setObjectName("gridGenerarPago");
@@ -1326,7 +1483,7 @@ public:
 
         pagosBottomLayout->addWidget(groupGenerarPago);
 
-        groupCobrarTicket = new QGroupBox(pagePagos);
+        groupCobrarTicket = new QGroupBox(tabPagosPendientes);
         groupCobrarTicket->setObjectName("groupCobrarTicket");
         gridCobrarTicket = new QHBoxLayout(groupCobrarTicket);
         gridCobrarTicket->setObjectName("gridCobrarTicket");
@@ -1428,27 +1585,124 @@ public:
         pagosBottomLayout->addWidget(groupCobrarTicket);
 
 
-        pagosLayout->addLayout(pagosBottomLayout);
+        tabPagosPendientesLayout->addLayout(pagosBottomLayout);
+
+        tabWidgetPagos->addTab(tabPagosPendientes, QString());
+        tabHistorialPagos = new QWidget();
+        tabHistorialPagos->setObjectName("tabHistorialPagos");
+        tabHistorialPagosLayout = new QVBoxLayout(tabHistorialPagos);
+        tabHistorialPagosLayout->setObjectName("tabHistorialPagosLayout");
+        historialTopControls = new QHBoxLayout();
+        historialTopControls->setObjectName("historialTopControls");
+        labelHistorialTitulo = new QLabel(tabHistorialPagos);
+        labelHistorialTitulo->setObjectName("labelHistorialTitulo");
+
+        historialTopControls->addWidget(labelHistorialTitulo);
+
+        spacerHistorialLeft = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        historialTopControls->addItem(spacerHistorialLeft);
+
+        labelOrdenarHistorial = new QLabel(tabHistorialPagos);
+        labelOrdenarHistorial->setObjectName("labelOrdenarHistorial");
+
+        historialTopControls->addWidget(labelOrdenarHistorial);
+
+        comboOrdenHistorial = new QComboBox(tabHistorialPagos);
+        comboOrdenHistorial->addItem(QString());
+        comboOrdenHistorial->setObjectName("comboOrdenHistorial");
+
+        historialTopControls->addWidget(comboOrdenHistorial);
+
+        spacerHistorialMid = new QSpacerItem(20, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        historialTopControls->addItem(spacerHistorialMid);
+
+        labelBuscarPorHistorial = new QLabel(tabHistorialPagos);
+        labelBuscarPorHistorial->setObjectName("labelBuscarPorHistorial");
+
+        historialTopControls->addWidget(labelBuscarPorHistorial);
+
+        comboBuscarHistorial = new QComboBox(tabHistorialPagos);
+        comboBuscarHistorial->addItem(QString());
+        comboBuscarHistorial->setObjectName("comboBuscarHistorial");
+
+        historialTopControls->addWidget(comboBuscarHistorial);
+
+        editBuscarHistorial = new QLineEdit(tabHistorialPagos);
+        editBuscarHistorial->setObjectName("editBuscarHistorial");
+
+        historialTopControls->addWidget(editBuscarHistorial);
+
+        btnBuscarHistorial = new QPushButton(tabHistorialPagos);
+        btnBuscarHistorial->setObjectName("btnBuscarHistorial");
+
+        historialTopControls->addWidget(btnBuscarHistorial);
+
+
+        tabHistorialPagosLayout->addLayout(historialTopControls);
+
+        tableHistorialPagos = new QTableWidget(tabHistorialPagos);
+        tableHistorialPagos->setObjectName("tableHistorialPagos");
+
+        tabHistorialPagosLayout->addWidget(tableHistorialPagos);
+
+        historialActions = new QHBoxLayout();
+        historialActions->setObjectName("historialActions");
+        spacerHistorialActions = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        historialActions->addItem(spacerHistorialActions);
+
+        btnActualizarPago = new QPushButton(tabHistorialPagos);
+        btnActualizarPago->setObjectName("btnActualizarPago");
+
+        historialActions->addWidget(btnActualizarPago);
+
+
+        tabHistorialPagosLayout->addLayout(historialActions);
+
+        tabWidgetPagos->addTab(tabHistorialPagos, QString());
+
+        pagosLayout->addWidget(tabWidgetPagos);
 
         stackedWidget->addWidget(pagePagos);
 
-        contentLayout->addWidget(stackedWidget);
+        verticalLayout_5->addWidget(stackedWidget);
 
 
-        horizontalLayout->addWidget(ContentFrame);
+        gridLayout->addWidget(widget_3, 0, 2, 1, 1);
 
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 1062, 23));
+        menubar->setGeometry(QRect(0, 0, 1090, 23));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
         MainWindow->setStatusBar(statusbar);
 
         retranslateUi(MainWindow);
+        QObject::connect(logo_btn, &QPushButton::toggled, icon_only_widget, &QWidget::setVisible);
+        QObject::connect(logo_btn, &QPushButton::toggled, full_menu_widget, &QWidget::setHidden);
+        QObject::connect(logo_btn_2, &QPushButton::toggled, icon_only_widget, &QWidget::setVisible);
+        QObject::connect(logo_btn, &QPushButton::toggled, logo_btn_2, &QPushButton::setChecked);
+        QObject::connect(logo_btn_2, &QPushButton::toggled, logo_btn, &QPushButton::setChecked);
+        QObject::connect(btnInicio_1, &QPushButton::toggled, btnInicio_2, &QPushButton::setChecked);
+        QObject::connect(btnPacientes_1, &QPushButton::toggled, btnPacientes_2, &QPushButton::setChecked);
+        QObject::connect(btnFichas_1, &QPushButton::toggled, btnFichas_2, &QPushButton::setChecked);
+        QObject::connect(btnTurnos_1, &QPushButton::toggled, btnTurnos_2, &QPushButton::setChecked);
+        QObject::connect(btnPagos_1, &QPushButton::toggled, btnPagos_2, &QPushButton::setChecked);
+        QObject::connect(btnInicio_2, &QPushButton::toggled, btnInicio_1, &QPushButton::setChecked);
+        QObject::connect(btnPacientes_2, &QPushButton::toggled, btnPacientes_1, &QPushButton::setChecked);
+        QObject::connect(btnFichas_2, &QPushButton::toggled, btnFichas_1, &QPushButton::setChecked);
+        QObject::connect(btnTurnos_2, &QPushButton::toggled, btnTurnos_1, &QPushButton::setChecked);
+        QObject::connect(btnPagos_2, &QPushButton::toggled, btnPagos_1, &QPushButton::setChecked);
+        QObject::connect(exit_btn_2, &QPushButton::clicked, MainWindow, qOverload<>(&QMainWindow::close));
+        QObject::connect(exit_btn_1, &QPushButton::clicked, MainWindow, qOverload<>(&QMainWindow::close));
 
-        stackedWidget->setCurrentIndex(3);
+        stackedWidget->setCurrentIndex(0);
+        tabWidgetFichas->setCurrentIndex(0);
+        tabWidgetPagos->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -1457,26 +1711,57 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        labelOpciones->setText(QCoreApplication::translate("MainWindow", "Opciones", nullptr));
-        btnInicio->setText(QCoreApplication::translate("MainWindow", "INICIO", nullptr));
-        btnPacientes->setText(QCoreApplication::translate("MainWindow", "PACIENTES", nullptr));
-        btnFichas->setText(QCoreApplication::translate("MainWindow", "FICHAS", nullptr));
-        btnTurnos->setText(QCoreApplication::translate("MainWindow", "TURNOS", nullptr));
-        btnPagos->setText(QCoreApplication::translate("MainWindow", "PAGOS", nullptr));
-        groupPacienteConsultorio->setTitle(QCoreApplication::translate("MainWindow", "Paciente en consultorio", nullptr));
-        labelDatosPacienteTitulo->setText(QCoreApplication::translate("MainWindow", "DATOS DEL PACIENTE", nullptr));
+#if QT_CONFIG(tooltip)
+        logo_btn->setToolTip(QCoreApplication::translate("MainWindow", "Alternar men\303\272", nullptr));
+#endif // QT_CONFIG(tooltip)
+        logo_btn->setText(QString());
+#if QT_CONFIG(tooltip)
+        btnInicio_1->setToolTip(QCoreApplication::translate("MainWindow", "INICIO", nullptr));
+#endif // QT_CONFIG(tooltip)
+        btnInicio_1->setText(QString());
+#if QT_CONFIG(tooltip)
+        btnPacientes_1->setToolTip(QCoreApplication::translate("MainWindow", "PACIENTES", nullptr));
+#endif // QT_CONFIG(tooltip)
+        btnPacientes_1->setText(QString());
+#if QT_CONFIG(tooltip)
+        btnFichas_1->setToolTip(QCoreApplication::translate("MainWindow", "FICHAS", nullptr));
+#endif // QT_CONFIG(tooltip)
+        btnFichas_1->setText(QString());
+#if QT_CONFIG(tooltip)
+        btnTurnos_1->setToolTip(QCoreApplication::translate("MainWindow", "TURNOS", nullptr));
+#endif // QT_CONFIG(tooltip)
+        btnTurnos_1->setText(QString());
+#if QT_CONFIG(tooltip)
+        btnPagos_1->setToolTip(QCoreApplication::translate("MainWindow", "PAGOS", nullptr));
+#endif // QT_CONFIG(tooltip)
+        btnPagos_1->setText(QString());
+#if QT_CONFIG(tooltip)
+        exit_btn_1->setToolTip(QCoreApplication::translate("MainWindow", "Salir", nullptr));
+#endif // QT_CONFIG(tooltip)
+        exit_btn_1->setText(QString());
+#if QT_CONFIG(tooltip)
+        logo_btn_2->setToolTip(QCoreApplication::translate("MainWindow", "Alternar men\303\272", nullptr));
+#endif // QT_CONFIG(tooltip)
+        logo_btn_2->setText(QString());
+        logo_label_2->setText(QCoreApplication::translate("MainWindow", "\360\237\246\267", nullptr));
+        logo_label_3->setText(QCoreApplication::translate("MainWindow", "Cl\303\255nica Dental", nullptr));
+        btnInicio_2->setText(QCoreApplication::translate("MainWindow", "INICIO", nullptr));
+        btnPacientes_2->setText(QCoreApplication::translate("MainWindow", "PACIENTES", nullptr));
+        btnFichas_2->setText(QCoreApplication::translate("MainWindow", "FICHAS", nullptr));
+        btnTurnos_2->setText(QCoreApplication::translate("MainWindow", "TURNOS", nullptr));
+        btnPagos_2->setText(QCoreApplication::translate("MainWindow", "PAGOS", nullptr));
+        exit_btn_2->setText(QCoreApplication::translate("MainWindow", "Salir", nullptr));
+        groupPendientes->setTitle(QCoreApplication::translate("MainWindow", "Turnos pendientes hoy", nullptr));
+        labelPendientes->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
+        groupGananciasHoy->setTitle(QCoreApplication::translate("MainWindow", "Ganancias hoy", nullptr));
+        labelGananciasHoy->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
+        groupPacienteEnConsultorio->setTitle(QCoreApplication::translate("MainWindow", "Paciente en consultorio", nullptr));
         labelPacienteNombre->setText(QCoreApplication::translate("MainWindow", "NOMBRE: GUSTAVO", nullptr));
         labelPacienteApellido->setText(QCoreApplication::translate("MainWindow", "APELLIDO: COSTAS", nullptr));
         labelPacienteDni->setText(QCoreApplication::translate("MainWindow", "DNI: 20202022", nullptr));
         labelPacienteEdad->setText(QCoreApplication::translate("MainWindow", "EDAD", nullptr));
         labelPacienteObraSocial->setText(QCoreApplication::translate("MainWindow", "OBRA SOCIAL", nullptr));
         btnFinalizarTurno->setText(QCoreApplication::translate("MainWindow", "FINALIZAR TURNO", nullptr));
-        groupPendientes->setTitle(QCoreApplication::translate("MainWindow", "Turnos pendientes hoy", nullptr));
-        labelPendientes->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
-        groupGananciasHoy->setTitle(QCoreApplication::translate("MainWindow", "Ganancias hoy", nullptr));
-        labelGananciasHoy->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
-        groupGananciasMes->setTitle(QCoreApplication::translate("MainWindow", "Ganancias mes", nullptr));
-        labelGananciasMes->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
         labelPacientesHoyInicio->setText(QCoreApplication::translate("MainWindow", "Pacientes de hoy (turnos)", nullptr));
         labelOrdenarInicio->setText(QCoreApplication::translate("MainWindow", "Ordenar por", nullptr));
         comboOrdenInicio->setItemText(0, QCoreApplication::translate("MainWindow", "HORA", nullptr));
@@ -1484,7 +1769,9 @@ public:
 
         labelDiaInicio->setText(QCoreApplication::translate("MainWindow", "D\303\255a:", nullptr));
         btnVerFichaInicio->setText(QCoreApplication::translate("MainWindow", "Ver ficha m\303\251dica", nullptr));
-        btnInicioTurnoInicio->setText(QCoreApplication::translate("MainWindow", "Inicio del turno", nullptr));
+        btnAgregarListaEspera->setText(QCoreApplication::translate("MainWindow", "Agregar a lista de espera", nullptr));
+        labelOrdenLlegadaTitulo->setText(QCoreApplication::translate("MainWindow", "ORDEN DE LLEGADA", nullptr));
+        btnInicioTurnoOrdenLlegada->setText(QCoreApplication::translate("MainWindow", "Inicio del turno", nullptr));
         btnBuscarPaciente->setText(QCoreApplication::translate("MainWindow", "Buscar", nullptr));
         btnVerFichaPac->setText(QCoreApplication::translate("MainWindow", "Ver ficha m\303\251dica", nullptr));
         btnEditarPaciente->setText(QCoreApplication::translate("MainWindow", "Editar paciente", nullptr));
@@ -1521,6 +1808,10 @@ public:
         btnVerHistorialPagos->setText(QCoreApplication::translate("MainWindow", "Ver historial de pagos del cliente", nullptr));
         labelAdjuntosTitulo->setText(QCoreApplication::translate("MainWindow", "ARCHIVOS ADJUNTOS", nullptr));
         btnVerArchivo->setText(QCoreApplication::translate("MainWindow", "Ver archivo", nullptr));
+        tabWidgetFichas->setTabText(tabWidgetFichas->indexOf(tabFichas), QCoreApplication::translate("MainWindow", "Fichas", nullptr));
+        labelOdontogramaTitulo->setText(QCoreApplication::translate("MainWindow", "ODONTOGRAMA", nullptr));
+        labelOdontogramaPlaceholder->setText(QCoreApplication::translate("MainWindow", "Aqu\303\255 se mostrar\303\241 el odontograma del paciente", nullptr));
+        tabWidgetFichas->setTabText(tabWidgetFichas->indexOf(tabOdontograma), QCoreApplication::translate("MainWindow", "Odontograma", nullptr));
         labelPacientesHoyTurnos->setText(QCoreApplication::translate("MainWindow", "Pacientes de hoy (turnos)", nullptr));
         labelOrdenarTurnos->setText(QCoreApplication::translate("MainWindow", "Ordenar por", nullptr));
         comboOrdenTurnos->setItemText(0, QCoreApplication::translate("MainWindow", "FINALIZADO", nullptr));
@@ -1559,15 +1850,6 @@ public:
         labelHoraTurno->setText(QCoreApplication::translate("MainWindow", "Hora", nullptr));
         labelTratTurno->setText(QCoreApplication::translate("MainWindow", "Tratamiento", nullptr));
         btnCrearTurno->setText(QCoreApplication::translate("MainWindow", "Crear turno", nullptr));
-        labelHistorialTitulo->setText(QCoreApplication::translate("MainWindow", "HISTORIAL DE PAGOS", nullptr));
-        labelOrdenarHistorial->setText(QCoreApplication::translate("MainWindow", "ORDENAR POR", nullptr));
-        comboOrdenHistorial->setItemText(0, QCoreApplication::translate("MainWindow", "FINALIZADO", nullptr));
-
-        labelBuscarPorHistorial->setText(QCoreApplication::translate("MainWindow", "BUSCAR POR", nullptr));
-        comboBuscarHistorial->setItemText(0, QCoreApplication::translate("MainWindow", "DNI", nullptr));
-
-        btnBuscarHistorial->setText(QCoreApplication::translate("MainWindow", "Buscar", nullptr));
-        btnActualizarPago->setText(QCoreApplication::translate("MainWindow", "Actualizar pago", nullptr));
         labelPagosPendientes->setText(QCoreApplication::translate("MainWindow", "PAGOS PENDIENTES", nullptr));
         labelOrdenarPend->setText(QCoreApplication::translate("MainWindow", "ORDENAR POR", nullptr));
         comboOrdenPend->setItemText(0, QCoreApplication::translate("MainWindow", "FINALIZADO", nullptr));
@@ -1617,6 +1899,17 @@ public:
         labelPago->setText(QCoreApplication::translate("MainWindow", "Pago", nullptr));
         labelFormaDePago->setText(QCoreApplication::translate("MainWindow", "Forma de pago", nullptr));
         btnCobrar->setText(QCoreApplication::translate("MainWindow", "Cobrar", nullptr));
+        tabWidgetPagos->setTabText(tabWidgetPagos->indexOf(tabPagosPendientes), QCoreApplication::translate("MainWindow", "Pagos Pendientes", nullptr));
+        labelHistorialTitulo->setText(QCoreApplication::translate("MainWindow", "HISTORIAL DE PAGOS", nullptr));
+        labelOrdenarHistorial->setText(QCoreApplication::translate("MainWindow", "ORDENAR POR", nullptr));
+        comboOrdenHistorial->setItemText(0, QCoreApplication::translate("MainWindow", "FINALIZADO", nullptr));
+
+        labelBuscarPorHistorial->setText(QCoreApplication::translate("MainWindow", "BUSCAR POR", nullptr));
+        comboBuscarHistorial->setItemText(0, QCoreApplication::translate("MainWindow", "DNI", nullptr));
+
+        btnBuscarHistorial->setText(QCoreApplication::translate("MainWindow", "Buscar", nullptr));
+        btnActualizarPago->setText(QCoreApplication::translate("MainWindow", "Actualizar pago", nullptr));
+        tabWidgetPagos->setTabText(tabWidgetPagos->indexOf(tabHistorialPagos), QCoreApplication::translate("MainWindow", "Historial de Pagos", nullptr));
     } // retranslateUi
 
 };
