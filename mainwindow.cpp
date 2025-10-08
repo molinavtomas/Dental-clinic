@@ -4,6 +4,8 @@
 #include <QDate>
 #include <QTime>
 #include <QMessageBox>
+#include <QIcon>
+#include <QSize>
 #include "addprestaciondialog.h"
 #include "editpacientedialog.h"
 
@@ -15,6 +17,28 @@ MainWindow::MainWindow(QWidget *parent)
 
     // Ocultar el menú de solo íconos al inicio
     ui->icon_only_widget->setVisible(false);
+
+    // Asignar íconos a los botones del menú icon_only_widget
+    ui->logo_btn->setIcon(QIcon(":/icons/navigation/svg/production/ic_menu_24px.svg"));
+    ui->logo_btn->setIconSize(QSize(24, 24));
+
+    ui->btnInicio_1->setIcon(QIcon(":/icons/action/svg/production/ic_home_24px.svg"));
+    ui->btnInicio_1->setIconSize(QSize(24, 24));
+
+    ui->btnPacientes_1->setIcon(QIcon(":/icons/action/svg/production/ic_account_circle_24px.svg"));
+    ui->btnPacientes_1->setIconSize(QSize(24, 24));
+
+    ui->btnFichas_1->setIcon(QIcon(":/icons/action/svg/production/ic_assignment_24px.svg"));
+    ui->btnFichas_1->setIconSize(QSize(24, 24));
+
+    ui->btnTurnos_1->setIcon(QIcon(":/icons/action/svg/production/ic_event_24px.svg"));
+    ui->btnTurnos_1->setIconSize(QSize(24, 24));
+
+    ui->btnPagos_1->setIcon(QIcon(":/icons/action/svg/production/ic_payment_24px.svg"));
+    ui->btnPagos_1->setIconSize(QSize(24, 24));
+
+    ui->exit_btn_1->setIcon(QIcon(":/icons/action/svg/production/ic_exit_to_app_24px.svg"));
+    ui->exit_btn_1->setIconSize(QSize(24, 24));
 
     // KPI labels (Inicio page)
     ui->labelPendientes->setText(QString::number(7));
