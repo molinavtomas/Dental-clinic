@@ -13,6 +13,9 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
+    // Ocultar el menú de solo íconos al inicio
+    ui->icon_only_widget->setVisible(false);
+
     // KPI labels (Inicio page)
     ui->labelPendientes->setText(QString::number(7));
     ui->labelGananciasHoy->setText("100000");
