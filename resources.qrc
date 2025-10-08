@@ -1,5 +1,22 @@
 <RCC>
     <qresource prefix="/">
         <file>style.qss</file>
+        <!-- Iconos principales -->
+        <file>icons/action/svg/production/ic_home_24px.svg</file>
+        <file>icons/action/svg/production/ic_settings_24px.svg</file>
+        <file>icons/action/svg/production/ic_exit_to_app_24px.svg</file>
+        <file>icons/action/svg/production/ic_search_24px.svg</file>
+        <file>icons/action/svg/production/ic_account_circle_24px.svg</file>
+        <file>icons/action/svg/production/ic_event_24px.svg</file>
+        <file>icons/action/svg/production/ic_assignment_24px.svg</file>
+        <file>icons/action/svg/production/ic_payment_24px.svg</file>
+        <file>icons/action/svg/production/ic_dashboard_24px.svg</file>
+        <file>icons/content/svg/production/ic_add_24px.svg</file>
+        <file>icons/content/svg/production/ic_remove_24px.svg</file>
+        <file>icons/content/svg/production/ic_save_24px.svg</file>
+        <file>icons/navigation/svg/production/ic_menu_24px.svg</file>
+        <file>icons/navigation/svg/production/ic_close_24px.svg</file>
+        <file>icons/navigation/svg/production/ic_arrow_back_24px.svg</file>
+        <file>icons/navigation/svg/production/ic_arrow_forward_24px.svg</file>
     </qresource>
 </RCC>
